@@ -34,3 +34,16 @@ markdown: kramdown
 
 permalink: /:categories/:title/
 
+exclude:
+  - verge-analysis/
+  - tests/
+  - scripts/
+  - plan.md
+  - PROJECTS_PORTFOLIO_REPORT.md
+  - UI_FIXES_SUMMARY.md
+  - ABOUT_PAGE_FIXES.md
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+
+

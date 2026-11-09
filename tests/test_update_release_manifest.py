@@ -115,6 +115,44 @@ class TestUpdateReleaseManifest(unittest.TestCase):
                 content = json.load(f)
             self.assertEqual(content, sentinel_data)
 
+    def test_reject_non_https_browser_download_url(self):
+        insecure_release = [
+            {
+                "id": 999,
+                "tag_name": "v1.0.0",
+                "name": "Malicious Release",
+                "draft": False,
+                "prerelease": False,
+                "published_at": "2026-11-01T00:00:00Z",
+                "html_url": "https://github.com/zvirox/your-tv-friend/releases/tag/v1.0.0",
+                "body": "Test release",
+                "assets": [
+                    {
+                        "id": 888,
+                        "name": "Your-UI-v1.0.0.apk",
+                        "size": 1000,
+                        "browser_download_url": "javascript:alert(1)"
+                    }
+                ]
+            }
+        ]
+        normalized = normalize_project(self.ytf_product, insecure_release)
+        # Insecure asset with javascript: scheme must be rejected
+        self.assertEqual(len(normalized["latest"]["assets"]), 0)
+
+    def test_checksum_validation_rejects_non_hex(self):
+        asset_bad = {
+            "name": "package.deb",
+            "digest": "sha256:<script>alert(1)</script>"
+        }
+        self.assertIsNone(extract_checksum(asset_bad, []))
+
+        asset_short = {
+            "name": "package.deb",
+            "digest": "sha256:1234abcd"
+        }
+        self.assertIsNone(extract_checksum(asset_short, []))
+
     def test_atomic_write_success(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             manifest_file = Path(tmpdir) / "release_manifest.json"

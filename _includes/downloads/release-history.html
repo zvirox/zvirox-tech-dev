@@ -9,7 +9,7 @@
         {% for rel in include.history %}
         <li class="zv-history-item">
           <div class="zv-history-meta">
-            <span class="zv-history-tag">{{ rel.tag_name }}</span>
+            <span class="zv-history-tag">{{ rel.tag_name | escape }}</span>
             {% if rel.prerelease %}
             <span class="zv-badge zv-badge-alpha-sm">Alpha</span>
             {% else %}

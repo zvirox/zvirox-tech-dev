@@ -106,10 +106,13 @@ def extract_checksum(asset: dict, all_assets: list[dict]) -> str | None:
     """
     Extracts sha256 checksum if available.
     Prefers GitHub's native asset digest field (sha256:xxxx).
+    Enforces valid 64-character lowercase hexadecimal hash.
     """
     digest = asset.get("digest")
     if digest and isinstance(digest, str) and digest.startswith("sha256:"):
-        return digest[len("sha256:"):]
+        h = digest[len("sha256:"):].strip().lower()
+        if re.match(r"^[a-f0-9]{64}$", h):
+            return h
     return None
 
 
@@ -157,6 +160,10 @@ def normalize_project(product: dict, releases: list[dict]) -> dict:
         for raw in raw_assets:
             name = raw.get("name", "")
             if pattern.search(name):
+                download_url = raw.get("browser_download_url", "")
+                # Security: Require strict https:// scheme on all asset URLs
+                if not download_url.startswith("https://"):
+                    continue
                 sha256 = extract_checksum(raw, raw_assets)
                 matched_assets.append({
                     "rule_id": rule["id"],
@@ -165,7 +172,7 @@ def normalize_project(product: dict, releases: list[dict]) -> dict:
                     "icon": rule.get("icon", "package"),
                     "name": name,
                     "size": raw.get("size", 0),
-                    "browser_download_url": raw.get("browser_download_url", ""),
+                    "browser_download_url": download_url,
                     "sha256": sha256
                 })
                 break  # Pick first match per rule
@@ -173,13 +180,20 @@ def normalize_project(product: dict, releases: list[dict]) -> dict:
     # Build history (up to 5 newest published releases)
     history = []
     for rel in published[:5]:
+        rel_url = rel.get("html_url", "")
+        if not rel_url.startswith("https://"):
+            rel_url = releases_url
         history.append({
             "tag_name": rel.get("tag_name", ""),
             "name": rel.get("name", rel.get("tag_name", "")),
             "published_at": rel.get("published_at", ""),
-            "html_url": rel.get("html_url", ""),
+            "html_url": rel_url,
             "prerelease": bool(rel.get("prerelease", False))
         })
+
+    latest_html_url = latest_release.get("html_url", "")
+    if not latest_html_url.startswith("https://"):
+        latest_html_url = releases_url
 
     return {
         "id": product["id"],
@@ -192,7 +206,7 @@ def normalize_project(product: dict, releases: list[dict]) -> dict:
             "tag_name": latest_release.get("tag_name", ""),
             "name": latest_release.get("name", latest_release.get("tag_name", "")),
             "published_at": latest_release.get("published_at", ""),
-            "html_url": latest_release.get("html_url", ""),
+            "html_url": latest_html_url,
             "prerelease": bool(latest_release.get("prerelease", False)),
             "summary": sanitize_release_notes(latest_release.get("body", "")),
             "assets": matched_assets

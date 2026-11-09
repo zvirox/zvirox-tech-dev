@@ -17,7 +17,7 @@
           {% else %}
             <span class="zv-badge zv-badge-stable" title="Production Stable Build">Stable</span>
           {% endif %}
-          <span class="zv-badge zv-badge-version">{{ include.manifest_proj.latest.tag_name }}</span>
+          <span class="zv-badge zv-badge-version">{{ include.manifest_proj.latest.tag_name | escape }}</span>
         {% else %}
           <span class="zv-badge zv-badge-planning">In Specification</span>
         {% endif %}
@@ -55,7 +55,7 @@
           </div>
 
           <div class="zv-asset-meta">
-            <span class="zv-asset-filename" title="{{ asset.name }}">{{ asset.name }}</span>
+            <span class="zv-asset-filename" title="{{ asset.name | escape }}">{{ asset.name | escape }}</span>
             <span class="zv-asset-size">
               {% assign mb_size = asset.size | divided_by: 1048576.0 %}
               {{ mb_size | round: 2 }} MB
@@ -86,7 +86,7 @@
       <!-- Release Summary Box -->
       <div class="zv-release-summary-card">
         <div class="zv-summary-header">
-          <span class="zv-summary-title">Release Notes ({{ include.manifest_proj.latest.tag_name }})</span>
+          <span class="zv-summary-title">Release Notes ({{ include.manifest_proj.latest.tag_name | escape }})</span>
           <a href="{{ include.manifest_proj.latest.html_url }}" target="_blank" rel="noopener noreferrer" class="zv-link-subtle">
             Full GitHub Release ↗
           </a>
