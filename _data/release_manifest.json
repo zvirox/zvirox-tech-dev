@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T04:53:25Z",
+  "generated_at": "2026-11-09T18:07:36Z",
   "projects": [
     {
       "id": "eep",
@@ -9,10 +9,10 @@
       "releases_url": "https://github.com/zvirox/easy-edits-pro/releases",
       "status": "available",
       "latest": {
-        "tag_name": "v0.1.2-alpha.4",
-        "name": "Easy Edits Pro v0.1.2-alpha.4",
-        "published_at": "2026-11-09T04:13:33Z",
-        "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.2-alpha.4",
+        "tag_name": "v0.1.2-alpha.5",
+        "name": "Easy Edits Pro v0.1.2-alpha.5",
+        "published_at": "2026-11-09T14:25:05Z",
+        "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.2-alpha.5",
         "prerelease": true,
         "summary": "Latest release with performance improvements and bug fixes.",
         "assets": [
@@ -22,33 +22,40 @@
             "platform": "Linux (All Distros)",
             "icon": "box",
             "name": "easy-edits-pro-linux-x86_64.flatpak",
-            "size": 16111920,
-            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.2-alpha.4/easy-edits-pro-linux-x86_64.flatpak",
-            "sha256": "c3fae00b3421378460addadc5dc9ff3295eaf58ca04b78bb246d55d12358a8bf"
+            "size": 16210808,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.2-alpha.5/easy-edits-pro-linux-x86_64.flatpak",
+            "sha256": "b9d18254e4277618fdf4bd10b10e0fb8cecfbea337edbbccaa93705f178133a0"
           },
           {
             "rule_id": "deb",
             "label": "DEB Package",
             "platform": "Debian / Ubuntu / Mint",
             "icon": "package",
-            "name": "Easy.Edits.Pro_0.1.2-alpha.4_amd64.deb",
-            "size": 24935760,
-            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.2-alpha.4/Easy.Edits.Pro_0.1.2-alpha.4_amd64.deb",
-            "sha256": "645f4842ebe93c0107decdcc33194ee08e7613f8989c9a6b9f0af6c99ab160ef"
+            "name": "Easy.Edits.Pro_0.1.2-alpha.5_amd64.deb",
+            "size": 25103546,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.2-alpha.5/Easy.Edits.Pro_0.1.2-alpha.5_amd64.deb",
+            "sha256": "057c479e4f0c17f58a79e71cc524bab98d0323904f1692b233a535bd90891437"
           },
           {
             "rule_id": "rpm",
             "label": "RPM Package",
             "platform": "Fedora / RHEL / openSUSE",
             "icon": "package",
-            "name": "Easy.Edits.Pro-0.1.2-alpha.4-1.x86_64.rpm",
-            "size": 25010696,
-            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.2-alpha.4/Easy.Edits.Pro-0.1.2-alpha.4-1.x86_64.rpm",
-            "sha256": "b682ab3d0495294475050e89087bb865ec8cb96b1b4c2d9d4a02381e924a279a"
+            "name": "Easy.Edits.Pro-0.1.2-alpha.5-1.x86_64.rpm",
+            "size": 25179918,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.2-alpha.5/Easy.Edits.Pro-0.1.2-alpha.5-1.x86_64.rpm",
+            "sha256": "0738601efc98557842854433286b9612b7029c515d5fdb3c919371e0b9f1231a"
           }
         ]
       },
       "history": [
+        {
+          "tag_name": "v0.1.2-alpha.5",
+          "name": "Easy Edits Pro v0.1.2-alpha.5",
+          "published_at": "2026-11-09T14:25:05Z",
+          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.2-alpha.5",
+          "prerelease": true
+        },
         {
           "tag_name": "v0.1.2-alpha.4",
           "name": "Easy Edits Pro v0.1.2-alpha.4",
@@ -75,13 +82,6 @@
           "name": "Easy Edits Pro v0.1.1-alpha.1",
           "published_at": "2026-10-27T13:48:41Z",
           "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.1-alpha.1",
-          "prerelease": true
-        },
-        {
-          "tag_name": "v0.1.0-alpha.26",
-          "name": "Easy Edits Pro v0.1.0-alpha.26",
-          "published_at": "2026-10-27T04:10:40Z",
-          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.0-alpha.26",
           "prerelease": true
         }
       ]
