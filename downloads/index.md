@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Downloads | Open-Source Software Releases"
-description: "Download verified, privacy-first open source releases of Easy Edits Pro, Audio Labs Pro, Screen Studio Pro, and Your TV Friend directly from official GitHub releases."
+description: "Download verified Linux and Android releases for Easy Edits Pro, Audio Labs Pro, and Your TV Friend, with GitHub release notes and SHA-256 checksums."
 permalink: /downloads/
 ---
 

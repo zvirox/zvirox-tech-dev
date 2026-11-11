@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cookie Policy | Zvirox
+title: Cookie Policy
 description: Zvirox cookie policy. We set zero tracking cookies and use browser localStorage strictly for your theme preference.
 permalink: /cookies/
 ---

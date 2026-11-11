@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kilo AI vs Cursor: Open Source AI Coding Agent Comparison"
-description: "Kilo AI is an open-source AI coding agent for VS Code, JetBrains, CLI, and Cloud. 500+ models at zero markup, BYOK support, and MIT license. How it compares to Cursor."
+description: "Compare Kilo AI and Cursor, including supported editors, model choices, BYOK, pricing, and open-source licensing."
 date: 2026-10-23
 author: "Zvirox"
 categories:

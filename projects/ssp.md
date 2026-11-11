@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Screen Studio Pro | Zvirox
+title: Screen Studio Pro
 description: A planned open-source Wayland screen recorder for Linux, with PipeWire capture, webcam picture-in-picture, and hardware-first encoding.
 permalink: /projects/ssp/
-image: "/assets/images/projects/screen-studio-pro-mockup.png"
+image: "/assets/images/projects/screen-studio-pro-mockup.webp"
 ---
 
 <script type="application/ld+json">
@@ -42,7 +42,10 @@ image: "/assets/images/projects/screen-studio-pro-mockup.png"
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/screen-studio-pro-mockup.png' | relative_url }}" alt="Screen Studio Pro concept capture window with monitor, window, and region sources, microphone and system audio meters, a webcam preview, encoding settings, and floating recording controls." width="1200" height="675" loading="lazy" decoding="async">
+        <picture>
+          <source type="image/webp" srcset="{{ '/assets/images/projects/screen-studio-pro-mockup.webp' | relative_url }}">
+          <img class="zv-project-image" src="{{ '/assets/images/projects/screen-studio-pro-mockup.png' | relative_url }}" alt="Screen Studio Pro concept capture window with monitor, window, and region sources, microphone and system audio meters, a webcam preview, encoding settings, and floating recording controls." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
         <figcaption class="zv-project-caption">Concept mockup based on Screen Studio Pro's planned Wayland recording workflow.</figcaption>
       </figure>
     </section>

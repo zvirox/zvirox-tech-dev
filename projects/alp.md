@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Audio Labs Pro | Zvirox
+title: Audio Labs Pro
 description: A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, with offline AI voice tools, dictation, and CLAP/LV2 hosting.
 permalink: /projects/alp/
-image: "/assets/images/projects/audio-labs-pro-mockup.png"
+image: "/assets/images/projects/audio-labs-pro-mockup.webp"
 ---
 
 <script type="application/ld+json">
@@ -42,7 +42,10 @@ image: "/assets/images/projects/audio-labs-pro-mockup.png"
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/audio-labs-pro-mockup.png' | relative_url }}" alt="Conceptual Audio Labs Pro Stories workspace with a multitrack audio timeline, seven workspace rail, docked transport, and voice effects inspector." width="1200" height="675" loading="lazy" decoding="async">
+        <picture>
+          <source type="image/webp" srcset="{{ '/assets/images/projects/audio-labs-pro-mockup.webp' | relative_url }}">
+          <img class="zv-project-image" src="{{ '/assets/images/projects/audio-labs-pro-mockup.png' | relative_url }}" alt="Conceptual Audio Labs Pro Stories workspace with a multitrack audio timeline, seven workspace rail, docked transport, and voice effects inspector." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
         <figcaption class="zv-project-caption">Concept mockup inspired by Audio Labs Pro's seven-workspace glass interface.</figcaption>
       </figure>
     </section>

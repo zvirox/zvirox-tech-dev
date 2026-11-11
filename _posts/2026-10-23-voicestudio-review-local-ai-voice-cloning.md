@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VoiceStudio Review: Local AI Voice Cloning in 646 Languages"
-description: "A hands-on review of VoiceStudio — the open-source AI voice studio that runs fully local. Voice cloning from 3 seconds, video dubbing, audiobook creation, and how it compares to ElevenLabs."
+description: "A hands-on review of VoiceStudio, an open-source local AI voice studio for voice cloning, video dubbing, audiobooks, and alternatives to ElevenLabs."
 date: 2026-10-23
 author: "Zvirox"
 categories:

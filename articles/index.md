@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Redirecting to Guides | Zvirox
+title: Redirecting to Guides
 permalink: /articles/
 redirect_to: /guides/
 ---

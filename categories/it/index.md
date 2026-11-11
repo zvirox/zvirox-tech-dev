@@ -1,5 +1,7 @@
 ---
 layout: category
+noindex: true
+sitemap: false
 title: IT & Technology
 category: IT
 description: Practical IT tutorials, infrastructure, troubleshooting, systems and technology explainers from Zvirox.

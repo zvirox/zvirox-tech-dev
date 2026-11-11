@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Running Voice AI Locally: Privacy-First Alternatives to Cloud TTS"
-description: "A guide to running voice AI locally — voice cloning, text-to-speech, and video dubbing without uploading your audio to the cloud. Includes VoiceStudio, Docker deployment, and privacy best practices."
+description: "Run voice cloning, text-to-speech, and video dubbing locally without uploading audio. Covers VoiceStudio, Docker, and privacy practices."
 date: 2026-10-23
 author: "Zvirox"
 categories:

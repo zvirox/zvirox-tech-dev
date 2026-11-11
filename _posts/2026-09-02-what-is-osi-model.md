@@ -12,12 +12,11 @@ tags:
   - TCP/IP
   - Network Security
   - Cybersecurity
-image: "/assets/images/what-is-osi-model.png"
+image: "/assets/images/what-is-osi-model.webp"
 ---
 
-![OSI Model — The 7 Layers of Networking](/assets/images/what-is-osi-model.png)
+![OSI Model — The 7 Layers of Networking](/assets/images/what-is-osi-model.webp)
 
-# The Internet's Secret Rulebook: A Non-Boring Guide to the OSI Model
  
 ## 1. Introduction (The Magic of Hitting "Send")
  
@@ -107,4 +106,8 @@ And here's the classic IT joke to leave you with: when something breaks and the 
 There is no Layer 8. It's just the user.
  
 You, typing your WiFi password wrong for the fourth time, are the final and most unpredictable layer of the entire OSI Model.
- 
+
+## References and further reading
+
+- [ISO/IEC 7498-1:1994 — OSI Basic Reference Model](https://www.iso.org/standard/20269.html)
+- [ITU-T Recommendation X.200 — OSI Basic Reference Model](https://www.itu.int/rec/T-REC-X.200/en/)

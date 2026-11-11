@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Licensing | Zvirox
+title: Licensing
 description: Per-project open-source licenses and commercial licensing options for Zvirox software applications.
 permalink: /licensing/
 ---

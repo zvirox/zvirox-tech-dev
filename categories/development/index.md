@@ -1,5 +1,7 @@
 ---
 layout: category
+noindex: true
+sitemap: false
 title: Software Development
 category: Development
 description: Software engineering, programming paradigms, architecture, and desktop application development from Zvirox.

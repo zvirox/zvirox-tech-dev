@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning"
-description: "A migration guide from ElevenLabs to VoiceStudio — cost comparison, feature mapping, local deployment, and how to move your voice cloning workflow on-premises."
+description: "Move from ElevenLabs to VoiceStudio with a cost and feature comparison, local deployment steps, and an on-premises migration guide."
 date: 2026-10-23
 author: "Zvirox"
 categories:

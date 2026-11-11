@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Is DHCP and How Does It Work?"
-description: "Learn how DHCP automatically assigns IP addresses and network settings to devices, how the DORA process works, what IP leases are, and how rogue DHCP servers can threaten a network."
+description: "Learn how DHCP assigns IP addresses, how the DORA exchange and leases work, and how rogue DHCP servers can threaten a network."
 date: 2026-09-01
 author: "Zvirox"
 categories:
@@ -12,12 +12,10 @@ tags:
   - IP Address
   - Network Security
   - DORA
-image: "/assets/images/dhcp-dynamic-host-configuration-protocol.png"
+image: "/assets/images/dhcp-dynamic-host-configuration-protocol.webp"
 ---
 
-![DHCP — Dynamic Host Configuration Protocol](/assets/images/dhcp-dynamic-host-configuration-protocol.png)
-
-# What Is DHCP and How Does It Work?
+![DHCP — Dynamic Host Configuration Protocol](/assets/images/dhcp-dynamic-host-configuration-protocol.webp)
 
 *Learn what DHCP is, how it assigns IP addresses, and why it is essential for modern networks.*
 
@@ -117,3 +115,6 @@ The good news: network admins have solid defenses against this. Business network
 DHCP might be one of the least glamorous protocols on the internet, but it's doing an enormous amount of invisible work. It hands out addresses, prevents chaos, saves IT departments from a lifetime of manual data entry, and gets your phone online before you've even finished sitting down.
 
 So next time you connect to Wi-Fi without lifting a finger, take a second to appreciate your router. It's out there, playing host, seating every device at exactly the right table, one lease at a time.
+## References and further reading
+
+- [Dynamic Host Configuration Protocol (RFC 2131)](https://www.rfc-editor.org/rfc/rfc2131.html)

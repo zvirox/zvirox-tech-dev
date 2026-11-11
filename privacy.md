@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Privacy Policy | Zvirox
+title: Privacy Policy
 description: Truthful privacy statement for the Zvirox website and open-source applications. Zero telemetry, local-first data processing.
 permalink: /privacy/
 ---

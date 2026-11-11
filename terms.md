@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Terms of Use | Zvirox
+title: Terms of Use
 description: Short, straightforward terms governing the Zvirox website and open-source software usage.
 permalink: /terms/
 ---

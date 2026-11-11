@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact | Zvirox
+title: Contact
 description: Get in touch with Prakashpuri Gauswami (@Prakash), solo maintainer of Zvirox open-source projects.
 permalink: /contact/
 ---

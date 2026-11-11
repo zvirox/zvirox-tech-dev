@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Redirecting to Voice & Audio AI | Zvirox
+title: Redirecting to Voice & Audio AI
 permalink: /categories/voice-ai/
 redirect_to: /categories/voice-audio-ai/
 ---

@@ -8,6 +8,10 @@ Website: https://zvirox.in
 Contact: info@zvirox.in | zvirox@proton.me
 GitHub Organization: https://github.com/zvirox
 
+## Downloads
+
+- [Downloads Portal](https://zvirox.in/downloads/): Current platform installers, release notes, and SHA-256 verification instructions.
+
 ## Open-Source Software Projects
 
 - [Easy Edits Pro (EEP)](https://zvirox.in/projects/eep/): Active alpha Linux desktop video editor built with Rust, Tauri, React, and GStreamer. Combines a multitrack timeline with a Rust-owned transactional project model. Shipped with 440 editor commands, 7 workspaces, a CLI, and an MCP server. AGPL-3.0 with commercial licensing option.
@@ -41,4 +45,4 @@ GitHub Organization: https://github.com/zvirox
 - [Terms of Use](https://zvirox.in/terms/): Terms for code and website content.
 - [Cookie Policy](https://zvirox.in/cookies/): Zero tracking cookies; browser localStorage used strictly for theme preference.
 - [HTML Sitemap](https://zvirox.in/sitemap/): Visual index of all site pages.
-- [XML Sitemap](https://zvirox.in/sitemap/sitemap.xml): Search engine index for Google Search Console.
+- [XML Sitemap](https://zvirox.in/sitemap.xml): Search engine index for Google Search Console.

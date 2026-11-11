@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Your TV Friend | Zvirox
+title: Your TV Friend
 description: A non-destructive Android TV cleanup tool and Your UI, a native television launcher, with reversible ADB-based package controls.
 permalink: /projects/ytf/
-image: "/assets/images/projects/your-tv-friend-mockup.png"
+image: "/assets/images/projects/your-tv-friend-mockup.webp"
 ---
 
 <script type="application/ld+json">
@@ -15,7 +15,7 @@ image: "/assets/images/projects/your-tv-friend-mockup.png"
   "applicationCategory": "UtilitiesApplication",
   "description": "A non-destructive Android TV cleanup tool and native television launcher (Your UI) with reversible ADB-based package controls, 5 visual themes, and 26 supported languages.",
   "url": "https://zvirox.in/projects/ytf/",
-  "downloadUrl": "https://github.com/zvirox/your-tv-friend",
+  "downloadUrl": "https://github.com/zvirox/your-tv-friend/releases",
   "license": "https://opensource.org/licenses/MIT",
   "author": {
     "@type": "Person",
@@ -42,7 +42,10 @@ image: "/assets/images/projects/your-tv-friend-mockup.png"
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/your-tv-friend-mockup.png' | relative_url }}" alt="Your TV Friend Your UI concept screen with For You recommendations, five round glass controls, and a translucent app shelf over a cinematic landscape." width="1200" height="675" loading="lazy" decoding="async">
+        <picture>
+          <source type="image/webp" srcset="{{ '/assets/images/projects/your-tv-friend-mockup.webp' | relative_url }}">
+          <img class="zv-project-image" src="{{ '/assets/images/projects/your-tv-friend-mockup.png' | relative_url }}" alt="Your TV Friend Your UI concept screen with For You recommendations, five round glass controls, and a translucent app shelf over a cinematic landscape." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
         <figcaption class="zv-project-caption">Concept mockup inspired by Your UI's Glass UI home-screen layout.</figcaption>
       </figure>
     </section>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Guides & Engineering Notes | Zvirox
+title: Guides & Engineering Notes
 description: Technical guides, system architecture notes, network protocol explainers, and local AI engineering write-ups from Zvirox.
 permalink: /guides/
 redirect_from:

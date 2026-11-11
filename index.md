@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zvirox · Open-Source Software for Linux & Android TV
+title: Open-Source Software for Linux & Android TV
 description: Open-source desktop and TV software for Linux and Android TV. Easy Edits Pro, Audio Labs Pro, Screen Studio Pro, and Your TV Friend.
 permalink: /
 ---

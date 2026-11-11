@@ -1,5 +1,7 @@
 ---
 layout: category
+noindex: true
+sitemap: false
 title: Cybersecurity
 category: Cybersecurity
 description: Cybersecurity fundamentals, defensive techniques, network security and threat analysis from Zvirox.
