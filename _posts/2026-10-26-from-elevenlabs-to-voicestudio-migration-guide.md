@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning"
-description: "Move from ElevenLabs to VoiceStudio with a cost and feature comparison, local deployment steps, and an on-premises migration guide."
+description: "A practical migration checklist for comparing hosted and local voice AI workflows, licensing, privacy, hardware, and current plan terms."
 date: 2026-10-23
 last_modified_at: 2026-11-13
 author: "Zvirox"
@@ -129,11 +129,11 @@ If you are considering moving from a hosted voice service, compare current prici
   </div>
   <div class="zv-faq-item">
     <button class="zv-faq-question">
-      What about the Pro Cloud tier?
+      Does VoiceStudio offer a hosted option?
       <span style="font-size:18px; line-height:1;">▾</span>
     </button>
     <div class="zv-faq-answer">
-      <p>VoiceStudio's product and hosted-service options can change. Check the current <a href="https://dev.voicestudio.sh/download">download page</a> and <a href="https://dev.voicestudio.sh/faq">FAQ</a> for available services and their terms.</p>
+      <p>Product and hosted-service options can change. Check the current <a href="https://dev.voicestudio.sh/">VoiceStudio website</a> and <a href="https://dev.voicestudio.sh/faq">FAQ</a> for available services and terms.</p>
     </div>
   </div>
 </div>
