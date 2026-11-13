@@ -100,7 +100,7 @@ For privacy-conscious developers, journalists, and content creators, local voice
       <span style="font-size:18px; line-height:1;">▾</span>
     </button>
     <div class="zv-faq-answer">
-      <p>Yes. Modern Macs with Apple Silicon and Windows laptops with integrated GPUs can run local voice AI, though generation will be slower than on a dedicated GPU.</p>
+      <p>Some laptops can run local voice models, but compatibility, memory needs, and speed depend on the model and hardware. Check the application's current system requirements before installing.</p>
     </div>
   </div>
   <div class="zv-faq-item">
