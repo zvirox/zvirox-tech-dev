@@ -101,7 +101,7 @@ image: "/assets/images/projects/easy-edits-pro-mockup.webp"
             <rect x="35" y="188" width="200" height="50" rx="5" fill="#1b2138" stroke="#334155" stroke-width="1"/>
             <text x="45" y="207" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Automation Bridges</text>
             <text x="45" y="222" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">CLI Client (eep-cli)</text>
-            <text x="45" y="233" font-family="'Liberation Mono', monospace" font-size="9" fill="#34d399">MCP Server (440 tool calls)</text>
+            <text x="45" y="233" font-family="'Liberation Mono', monospace" font-size="9" fill="#34d399">MCP server with editor command access</text>
 
             <rect x="35" y="250" width="200" height="46" rx="5" fill="#141828" stroke="rgba(255,80,166,0.3)" stroke-width="1"/>
             <text x="135" y="278" font-family="'Liberation Mono', monospace" font-size="10" fill="#ffa5d0" text-anchor="middle">React 18 · TypeScript</text>
