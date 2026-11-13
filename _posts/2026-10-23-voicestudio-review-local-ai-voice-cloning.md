@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "VoiceStudio Review: Local AI Voice Cloning in 646 Languages"
-description: "A hands-on review of VoiceStudio, an open-source local AI voice studio for voice cloning, video dubbing, audiobooks, and alternatives to ElevenLabs."
+title: "VoiceStudio Review: Local AI Voice Cloning and Dubbing"
+description: "An independent overview of VoiceStudio's open-source desktop app, local voice workflows, downloads, licensing, and alternatives to cloud TTS."
 date: 2026-10-23
+last_modified_at: 2026-11-13
 author: "Zvirox"
 categories:
   - voice-audio-ai
@@ -20,17 +21,17 @@ tags:
 image: "/assets/images/ai/voicestudio-hero.webp"
 ---
 
-![VoiceStudio Review: Local AI Voice Cloning in 646 Languages](/assets/images/ai/voicestudio-hero.webp)
+![VoiceStudio desktop application](/assets/images/ai/voicestudio-hero.webp)
 
 > *Independent review; no affiliation or sponsorship.*
 
 ## VoiceStudio: The Open-Source AI Voice Studio
 
-VoiceStudio (formerly OmniVoice Studio) is a fully-local, open-source AI voice cloning and dubbing platform. It runs on your own machine — no account, no cloud upload, no subscription required. With support for **646 languages**, it's positioned as a privacy-first alternative to ElevenLabs and other cloud-based voice AI services.
+VoiceStudio (formerly OmniVoice Studio) is an open-source voice production application with desktop workflows for voice cloning, speech generation, dubbing, and transcription. Its desktop app can run supported workflows locally after the required models are installed; optional hosted services have separate requirements. The app is available without an account under the GNU AGPL-3.0 license. Language coverage and model availability depend on the selected engine, so check the current [VoiceStudio documentation](https://dev.voicestudio.sh/docs) for supported workflows.
 
 ### What It Can Do
 
-VoiceStudio ships with seven core capabilities, presented as a numbered feature carousel on the homepage:
+VoiceStudio's vendor materials describe these voice workflows; availability and behavior can depend on the app version and selected model:
 
 | # | Feature | What It Does |
 |---|---------|--------------|
@@ -44,45 +45,13 @@ VoiceStudio ships with seven core capabilities, presented as a numbered feature 
 
 Beyond the core features, VoiceStudio includes **WorkflowStudio** (a desktop workflow app), a **Local API** for programmatic access, and an optional **Pro Cloud** hosted tier (early access).
 
-<div class="zv-screenshot-grid">
-  <div class="zv-screenshot-item">
-    <img src="/assets/images/ai/voicestudio-launchpad.webp" alt="VoiceStudio Launchpad">
-    <div class="zv-screenshot-label">Launchpad</div>
-  </div>
-  <div class="zv-screenshot-item">
-    <img src="/assets/images/ai/voicestudio-voice-design.webp" alt="VoiceStudio Voice Design">
-    <div class="zv-screenshot-label">Voice Design</div>
-  </div>
-  <div class="zv-screenshot-item">
-    <img src="/assets/images/ai/voicestudio-library.webp" alt="VoiceStudio Library">
-    <div class="zv-screenshot-label">Library & Projects</div>
-  </div>
-  <div class="zv-screenshot-item">
-    <img src="/assets/images/ai/voicestudio-studio.webp" alt="VoiceStudio Studio">
-    <div class="zv-screenshot-label">Studio</div>
-  </div>
-  <div class="zv-screenshot-item">
-    <img src="/assets/images/ai/voicestudio-clone.webp" alt="VoiceStudio Voice Clone">
-    <div class="zv-screenshot-label">Voice Clone</div>
-  </div>
-  <div class="zv-screenshot-item">
-    <img src="/assets/images/ai/voicestudio-gallery.webp" alt="VoiceStudio Voice Gallery">
-    <div class="zv-screenshot-label">Voice Gallery</div>
-  </div>
-</div>
-
 ### Installation
 
-VoiceStudio distributes native installers for Windows, macOS, and Linux, plus Docker images. The quickest way to get started on Windows is the PowerShell install command:
-
-<div class="zv-install-block">
-<pre><code>powershell -ep bypass -c "irm https://voicestudio.sh/install.ps1|iex"</code></pre>
-<div class="zv-install-hint">Copy and paste into PowerShell. Also available as .msi, .dmg, .deb, and Docker.</div>
-</div>
+VoiceStudio publishes platform-specific downloads and verification details on its [official download page](https://dev.voicestudio.sh/download). Check that page for the current release, supported operating systems, installer links, and checksums before installing.
 
 ### Pricing & Licensing
 
-VoiceStudio uses a three-tier model:
+The desktop application is free and open source under GNU AGPL-3.0. VoiceStudio also offers separate paid Pro and Lifetime commercial-license builds. Pricing and plan terms can change; consult the vendor's [current FAQ](https://dev.voicestudio.sh/faq) and [Pro page](https://dev.voicestudio.sh/pro) before purchasing.
 
 <table class="zv-comparison-table">
   <thead>
@@ -97,32 +66,32 @@ VoiceStudio uses a three-tier model:
     <tr>
       <td>License</td>
       <td>AGPL-3.0</td>
-      <td>Commercial seat</td>
-      <td>Hosted service</td>
+      <td>Separate commercial-license build</td>
+      <td>Hosted service; check current plan</td>
     </tr>
     <tr>
       <td>Cost</td>
       <td>Free</td>
-      <td>$99/year or $299 once</td>
-      <td>Credits from $6</td>
+      <td>See current Pro page</td>
+      <td>Check current plan pricing</td>
     </tr>
     <tr>
       <td>Commercial use</td>
       <td>AGPL-3.0 licensed</td>
-      <td>Yes (1 user, 3 devices)</td>
-      <td>Paid plans</td>
+      <td>See current licence terms</td>
+      <td>See current plan terms</td>
     </tr>
     <tr>
       <td>Languages</td>
-      <td>646</td>
-      <td>646</td>
-      <td>645 (74 on paid)</td>
+      <td>Varies by installed model</td>
+      <td>Varies by installed model</td>
+      <td>Depends on service and plan</td>
     </tr>
     <tr>
       <td>Audio privacy</td>
-      <td>Stays local</td>
-      <td>Stays local</td>
-      <td>Uploaded</td>
+      <td>Depends on workflow and model</td>
+      <td>Depends on workflow and model</td>
+      <td>Hosted processing; see provider policy</td>
     </tr>
     <tr>
       <td>Refund</td>
@@ -135,25 +104,20 @@ VoiceStudio uses a three-tier model:
 
 ### VoiceStudio vs ElevenLabs
 
-| | VoiceStudio OSS | VoiceStudio Pro | ElevenLabs Cloud |
+| | VoiceStudio desktop app | VoiceStudio paid plans | ElevenLabs |
 |---|---|---|---|
-| **Runs on** | Your machine | Your machine | Their cloud |
-| **Source** | AGPL-3.0 | Closed | Closed, MIT SDKs |
-| **Start with** | Install | Install + key | Waitlist + account |
-| **Your audio** | Stays local | Stays local | Uploaded |
-| **Cost** | Free | $99/yr or $299 once | Credits from $6 |
+| **Deployment** | Local workflows are available for supported engines | See current plan and product terms | See current product and plan details |
+| **License** | GNU AGPL-3.0; model terms are separate | See current commercial license | See provider terms |
+| **Audio handling** | Depends on workflow, model, and network settings | Depends on product and workflow | Review provider privacy and retention terms |
+| **Cost** | Free desktop app | See current VoiceStudio plans | Check provider pricing |
 
-### Adoption & Community
+### Release status
 
-- **~596,000** GitHub release downloads
-- **103,171+** Docker Hub pulls
-- **40,443+** GHCR pulls
-- **50,000+** GitHub stars
-- **Latest release:** v0.5.6
+The vendor's [release notes](https://dev.voicestudio.sh/blog/voicestudio-0-5-7-release) announce VoiceStudio **v0.5.7**, dated October 26, 2026. For current installers and checksums, use the [official download page](https://dev.voicestudio.sh/download); download counters and repository metrics change over time and are omitted here.
 
 ### The Bottom Line
 
-VoiceStudio delivers enterprise-grade voice AI — cloning, dubbing, audiobooks, transcripts — with a local-first architecture that keeps your audio on your own hardware. If privacy and cost are priorities, it's a compelling alternative to ElevenLabs. The Pro tier adds commercial licensing and multi-device support for teams that need it.
+VoiceStudio brings several voice production workflows into a desktop app, with local processing available for supported engines and separately licensed paid offerings. If privacy or cost matters to your use case, review model terms, network behavior, hardware needs, and current plan details before comparing it with hosted services.
 
 <div class="zv-faq-accordion">
   <div class="zv-faq-item">
@@ -171,7 +135,7 @@ VoiceStudio delivers enterprise-grade voice AI — cloning, dubbing, audiobooks,
       <span style="font-size:18px; line-height:1;">▾</span>
     </button>
     <div class="zv-faq-answer">
-      <p>No. VoiceStudio runs fully local on your machine. Audio never leaves your device unless you choose the optional Cloud tier.</p>
+      <p>Local workflows can process audio on your device after the required models are installed. Optional hosted features and network activity have separate behavior; check the current documentation and settings for the workflow you use.</p>
     </div>
   </div>
   <div class="zv-faq-item">
@@ -180,7 +144,7 @@ VoiceStudio delivers enterprise-grade voice AI — cloning, dubbing, audiobooks,
       <span style="font-size:18px; line-height:1;">▾</span>
     </button>
     <div class="zv-faq-answer">
-      <p>Windows 10/11 (x64), macOS (Apple Silicon and Intel), Linux, and Docker.</p>
+      <p>Platform availability and architecture requirements change. Check the current <a href="https://dev.voicestudio.sh/download">download page</a> for supported systems.</p>
     </div>
   </div>
   <div class="zv-faq-item">
@@ -189,7 +153,7 @@ VoiceStudio delivers enterprise-grade voice AI — cloning, dubbing, audiobooks,
       <span style="font-size:18px; line-height:1;">▾</span>
     </button>
     <div class="zv-faq-answer">
-      <p>The OSS edition is AGPL-3.0 licensed. For commercial use with a seat license, VoiceStudio Pro costs $99/year or $299 once, covering 1 user and 3 devices.</p>
+      <p>The desktop OSS edition is GNU AGPL-3.0 licensed. VoiceStudio offers separate commercial-license plans; check the vendor's <a href="https://dev.voicestudio.sh/faq">FAQ</a> and <a href="https://dev.voicestudio.sh/pro">Pro page</a> for current terms and prices.</p>
     </div>
   </div>
 </div>
