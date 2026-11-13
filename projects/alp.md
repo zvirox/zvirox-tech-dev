@@ -6,6 +6,8 @@ permalink: /projects/alp/
 image: "/assets/images/projects/audio-labs-pro-mockup.webp"
 ---
 
+{% assign alp_release = site.data.release_manifest.projects | where: "id", "alp" | first %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,7 +36,7 @@ image: "/assets/images/projects/audio-labs-pro-mockup.webp"
       <header class="zv-project-intro">
         <h1 class="zv-post-title" id="project-title">Audio Labs Pro</h1>
         <p class="zv-post-description">A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, with offline AI voice tools, dictation, voice profiles, and CLAP/LV2 plugin hosting.</p>
-        <p class="zv-project-status">Linux audio workstation · Alpha v0.0.1-alpha.2</p>
+        <p class="zv-project-status">Linux audio workstation · {{ alp_release.latest.tag_name | default: "Alpha release" }}</p>
         <div class="zv-project-tags" aria-label="Technologies"><span class="zv-tag">Rust</span> <span class="zv-tag">Linux</span> <span class="zv-tag">Iced</span> <span class="zv-tag">Audio DSP</span> <span class="zv-tag">Local AI</span></div>
         <div class="zv-project-actions">
           <a href="https://github.com/zvirox/audio-labs-pro" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary">View on GitHub <span aria-hidden="true">↗</span></a>
@@ -166,8 +168,8 @@ image: "/assets/images/projects/audio-labs-pro-mockup.webp"
 
             <rect x="615" y="148" width="190" height="66" rx="5" fill="#1e1432" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
             <text x="625" y="168" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">ONNX &amp; GGUF Engines</text>
-            <text x="625" y="184" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">VoiceStudio clone weights</text>
-            <text x="625" y="200" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#34d399">646 languages · 0 cloud latency</text>
+            <text x="625" y="184" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">Local voice model inference</text>
+            <text x="625" y="200" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#34d399">Coverage depends on installed model</text>
 
             <rect x="615" y="226" width="190" height="70" rx="5" fill="#1e1432" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
             <text x="625" y="246" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Master WAV/FLAC Out</text>
@@ -189,7 +191,7 @@ image: "/assets/images/projects/audio-labs-pro-mockup.webp"
 
       <h2>Current Status & Limitations</h2>
       <p>
-        Audio Labs Pro is currently released as an <strong>alpha</strong> (v0.0.1-alpha.2). It targets Linux environments 
+        Audio Labs Pro is currently released as an <strong>alpha</strong> ({{ alp_release.latest.tag_name | default: "see GitHub releases" }}). It targets Linux environments
         (requiring ALSA headers and pkg-config). While core multitrack mixing, plugin hosting, and AI speech generation 
         are operational, support varies across specific hardware configurations and plugin implementations.
       </p>
