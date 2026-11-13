@@ -1,3 +1,11 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{% assign alp_release = site.data.release_manifest.projects | where: "id", "alp" | first %}
+{% assign eep_release = site.data.release_manifest.projects | where: "id", "eep" | first %}
+{% assign ytf_release = site.data.release_manifest.projects | where: "id", "ytf" | first %}
 # Zvirox
 
 > Open-source video, audio, and TV software for Linux and Android TV.
@@ -14,19 +22,19 @@ GitHub Organization: https://github.com/zvirox
 
 ## Open-Source Software Projects
 
-- [Easy Edits Pro (EEP)](https://zvirox.in/projects/eep/): Active alpha Linux desktop video editor built with Rust, Tauri, React, and GStreamer. Combines a multitrack timeline with a Rust-owned transactional project model. Shipped with 440 editor commands, 7 workspaces, a CLI, and an MCP server. AGPL-3.0 with commercial licensing option.
+- [Easy Edits Pro (EEP)](https://zvirox.in/projects/eep/): {{ eep_release.latest.tag_name | default: "Active alpha release" }} Linux desktop video editor built with Rust, Tauri, React, and GStreamer. Combines a multitrack timeline with a Rust-owned transactional project model, hundreds of editor commands, a CLI, and an MCP server. See the project README and command reference for the current generated count. AGPL-3.0 with commercial licensing option.
   - Repository: https://github.com/zvirox/easy-edits-pro
-- [Audio Labs Pro (ALP)](https://zvirox.in/projects/alp/): Alpha v0.0.1 Linux audio studio built with Rust and iced. Features multitrack recording, mixing, CLAP/LV2 plugin hosting, offline local AI voice cloning, and a 14-tool Model Context Protocol (MCP) server. Apache-2.0.
+- [Audio Labs Pro (ALP)](https://zvirox.in/projects/alp/): {{ alp_release.latest.tag_name | default: "Current alpha release" }} Linux audio studio built with Rust and iced. Features multitrack recording, mixing, CLAP/LV2 plugin hosting, offline local AI voice cloning, and a 14-tool Model Context Protocol (MCP) server. Apache-2.0.
   - Repository: https://github.com/zvirox/audio-labs-pro
 - [Screen Studio Pro (SSP)](https://zvirox.in/projects/ssp/): Planned open-source Wayland screen recorder for Linux with a frosted-glass UI, PipeWire capture, webcam picture-in-picture, and hardware-first encoding. Currently in specification phase. MIT.
   - Repository: https://github.com/zvirox/screen-studio-pro
-- [Your TV Friend (YTF)](https://zvirox.in/projects/ytf/): v0.0.3 Android TV non-destructive debloater and native television launcher (Your UI). Disables OEM bloatware reversibly via ADB without root. Features 5 customizable visual themes, 26 languages, and 297 catalogued device profiles. MIT.
+- [Your TV Friend (YTF)](https://zvirox.in/projects/ytf/): {{ ytf_release.latest.tag_name | default: "Current release" }} Android TV non-destructive debloater and native television launcher (Your UI). Disables OEM bloatware reversibly via ADB without root. Features 5 customizable visual themes, 26 languages, and 297 catalogued device profiles. MIT.
   - Repository: https://github.com/zvirox/your-tv-friend
 
 ## Core Technical Guides & Architecture Notes
 
 - [Voice & Audio AI](https://zvirox.in/categories/voice-audio-ai/): Local voice cloning, text-to-speech, and audio privacy.
-  - [VoiceStudio Review](https://zvirox.in/voice-audio-ai/voicestudio-review-local-ai-voice-cloning/): Hands-on review of offline voice cloning in 646 languages.
+  - [VoiceStudio Review](https://zvirox.in/voice-audio-ai/voicestudio-review-local-ai-voice-cloning/): Independent overview of local voice workflows, downloads, and licensing.
   - [Running Voice AI Locally](https://zvirox.in/voice-audio-ai/running-voice-ai-locally-privacy-first-tts/): Privacy-first alternatives to cloud TTS engines.
   - [From ElevenLabs to VoiceStudio](https://zvirox.in/voice-audio-ai/from-elevenlabs-to-voicestudio-migration-guide/): On-premises voice cloning migration guide.
 - [AI & Coding Agents](https://zvirox.in/categories/ai/): Model-agnostic workflows and AI agents.
