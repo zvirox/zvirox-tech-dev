@@ -6,6 +6,9 @@ permalink: /projects/
 image: "/assets/images/zvirox-logo-2026.png"
 ---
 
+{% assign alp_release = site.data.release_manifest.projects | where: "id", "alp" | first %}
+{% assign ytf_release = site.data.release_manifest.projects | where: "id", "ytf" | first %}
+
 <div class="zv-container">
 
   <!-- HERO SECTION -->
@@ -85,7 +88,7 @@ image: "/assets/images/zvirox-logo-2026.png"
       <article class="zv-card zv-project-card">
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
-            AUDIO WORKSTATION • ALPHA v0.0.1
+            AUDIO WORKSTATION • {{ alp_release.latest.tag_name | default: "ALPHA" | upcase }}
           </div>
           <h3 class="zv-card-title">
             <a href="{{ '/projects/alp/' | relative_url }}">Audio Labs Pro</a>
@@ -149,7 +152,7 @@ image: "/assets/images/zvirox-logo-2026.png"
       <article class="zv-card zv-project-card">
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
-            ANDROID TV • v0.0.3
+            ANDROID TV • {{ ytf_release.latest.tag_name | default: "Releases" }}
           </div>
           <h3 class="zv-card-title">
             <a href="{{ '/projects/ytf/' | relative_url }}">Your TV Friend</a>
