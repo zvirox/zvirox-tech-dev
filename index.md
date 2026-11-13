@@ -5,6 +5,9 @@ description: Open-source desktop and TV software for Linux and Android TV. Easy 
 permalink: /
 ---
 
+{% assign alp_release = site.data.release_manifest.projects | where: "id", "alp" | first %}
+{% assign ytf_release = site.data.release_manifest.projects | where: "id", "ytf" | first %}
+
 <div class="zv-container">
 
   <!-- =====================================================
@@ -175,7 +178,7 @@ permalink: /
         </div>
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
-            AUDIO WORKSTATION • ALPHA v0.0.1
+            AUDIO WORKSTATION • {{ alp_release.latest.tag_name | default: "ALPHA" | upcase }}
           </div>
           <h3 class="zv-card-title">
             <a href="{{ '/projects/alp/' | relative_url }}">Audio Labs Pro</a>
@@ -278,7 +281,7 @@ permalink: /
         </div>
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
-            ANDROID TV • v0.0.3
+            ANDROID TV • {{ ytf_release.latest.tag_name | default: "Releases" }}
           </div>
           <h3 class="zv-card-title">
             <a href="{{ '/projects/ytf/' | relative_url }}">Your TV Friend</a>
@@ -402,15 +405,15 @@ permalink: /
     <div class="zv-numbers-grid">
 
       <div class="zv-number-card">
-        <span class="zv-number-val">440</span>
+        <span class="zv-number-val">489</span>
         <span class="zv-number-label">Editor Commands</span>
-        <span class="zv-number-sub">Shipped in Easy Edits Pro</span>
+        <span class="zv-number-sub">In tagged release v0.1.2-alpha.7</span>
       </div>
 
       <div class="zv-number-card">
         <span class="zv-number-val">7</span>
         <span class="zv-number-label">Workspaces</span>
-        <span class="zv-number-sub">Dedicated audio & video workflows</span>
+        <span class="zv-number-sub">Selectable Audio Labs Pro workspaces</span>
       </div>
 
       <div class="zv-number-card">
