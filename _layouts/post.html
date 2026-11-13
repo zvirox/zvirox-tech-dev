@@ -73,6 +73,11 @@ layout: default
           {{ page.date | date: "%B %d, %Y" }}
         </span>
 
+        {% if page.last_modified_at %}
+          <span>•</span>
+          <span>Updated {{ page.last_modified_at | date: "%B %d, %Y" }}</span>
+        {% endif %}
+
         <span>•</span>
 
         <span>
