@@ -3,6 +3,7 @@ layout: post
 title: "What Is SSH? Secure Shell Explained"
 description: "Learn what SSH is, how Secure Shell works, why it is used for remote access, how SSH authentication works, and how to secure SSH connections."
 date: 2026-09-01
+last_modified_at: 2026-11-13
 author: "Zvirox"
 categories:
   - Linux
@@ -48,16 +49,16 @@ At a high level, SSH runs on a simple relationship: your machine is the **client
 To pull this off, SSH leans on three flavors of cryptography working as a team:
 
 - **Symmetric encryption**: one shared secret key that both sides use to lock and unlock the data flowing between them. It's fast, which is why it handles the actual bulk of the conversation once the connection is set up.
-- **Asymmetric encryption**: a pair of mathematically linked keys — a public one and a private one. This is used at the start of the connection to safely agree on that shared secret, and to prove identity, without ever transmitting a secret key in the open.
-- **Hashing**: a one-way mathematical fingerprint used to check that data hasn't been tampered with in transit. If even a single bit changes en route, the fingerprint changes too, and SSH knows something's wrong.
+- **Key exchange and public-key cryptography**: negotiated algorithms establish shared session keys, while the server proves its identity with a host key. User public keys can separately authenticate a client.
+- **Message authentication or authenticated encryption**: negotiated integrity protection detects tampering in transit. The exact algorithms depend on the SSH negotiation; a hash alone is not the complete integrity mechanism.
 
-None of these methods alone would be enough. Symmetric encryption is fast but needs a safe way to share the key. Asymmetric encryption is safe but too slow for heavy data. So SSH uses asymmetric crypto briefly to set things up, then switches to symmetric crypto to do the heavy lifting, while hashing quietly checks everyone's work in the background.
+These mechanisms work together: SSH negotiates algorithms and session keys, authenticates the server, then protects transport data with encryption and integrity checks. User authentication happens as a separate protocol step after the transport is established.
 
 ## 5. The SSH Process
 
 Here's what's really happening during that boring-looking moment when your terminal says "Connecting..."
 
-**Step 1: The introduction.** Your client says, "Hey, I'd like to talk," and the server replies with its own public key so both sides can verify who they're dealing with. This is like walking up to a club and the bouncer flashing his badge first, so you know you're not about to hand your ID to a random guy in a trench coat.
+**Step 1: The introduction.** The client and server exchange protocol versions and negotiate supported algorithms. During key exchange, the server proves possession of its host private key by signing the exchange data. The client checks that host key against its trust configuration (for example, `known_hosts`) to detect an unexpected server.
 
 **Step 2: The secret handshake.** Client and server run a quick negotiation (using algorithms like Diffie-Hellman) to agree on a shared symmetric session key, without ever actually sending that key across the network in a form anyone could steal. It's the cryptographic equivalent of two people shouting numbers across a crowded room and somehow both ending up with the same secret answer, while everyone else in the room has no clue what it is.
 
@@ -79,16 +80,16 @@ Because SSH is the front door to so many servers, it's also one of the most heav
 
 The good news: defending against this doesn't require black magic, just some sensible hardening:
 
-- **Disable password logins entirely** and require key-based authentication instead — since brute-forcing a 2048-bit-plus cryptographic key is computationally hopeless for an attacker.
+- **Disable password logins when key-based authentication fits your access needs**, and protect private keys with suitable permissions and passphrases. This reduces exposure to password guessing; it does not make weak account controls or stolen keys safe.
 - **Use Fail2Ban** or similar tools, which watch the server's logs and automatically block any IP address that racks up too many failed login attempts within a short time window.
-- **Move SSH off the default port 22** to a custom port, which won't stop a determined attacker but dramatically cuts down the noise from lazy, automated scanners.
+- **Changing the default port can reduce routine scan noise**, but it is not an access-control measure and does not replace authentication hardening or firewall rules.
 - **Disable root login** directly, forcing anyone in to use a regular account first, adding one more speed bump for attackers.
 
 None of these are silver bullets on their own, but layered together, they turn your server from an easy target into a very unappealing one.
 
 ## 8. Conclusion
 
-SSH is the quiet workhorse behind almost every remote server interaction in the modern tech world. It replaced Telnet's postcard-level security with an encrypted, authenticated, tamper-proof tunnel, and it does it using a clever tag-team of symmetric encryption, asymmetric encryption, and hashing — all wrapped up in a "secret handshake" that happens in the blink of an eye every time you connect.
+SSH is a widely used protocol for secure remote access. Its transport negotiates key exchange, server host authentication, encryption, and integrity protection; user authentication follows as a separate step. This is a more precise picture than treating all of SSH security as one “secret handshake.”
 
 For developers and sysadmins, it's simply non-negotiable: it's how you manage servers, deploy code, and fix things at 2 AM without ever leaving your desk. And here's the best part — the next time you open a terminal, type `ssh user@server`, and watch that command prompt light up with a remote shell, you can lean back and enjoy the fact that you now look exactly like a hacker from a 90s movie. Green text optional. Sunglasses indoors, entirely up to you.
 ## References and further reading
@@ -96,3 +97,4 @@ For developers and sysadmins, it's simply non-negotiable: it's how you manage se
 - [The Secure Shell (SSH) Protocol Architecture (RFC 4251)](https://www.rfc-editor.org/rfc/rfc4251.html)
 - [The Secure Shell (SSH) Transport Layer Protocol (RFC 4253)](https://www.rfc-editor.org/rfc/rfc4253.html)
 - [The Secure Shell (SSH) Authentication Protocol (RFC 4252)](https://www.rfc-editor.org/rfc/rfc4252.html)
+- [OpenBSD sshd_config manual](https://man.openbsd.org/sshd_config)
