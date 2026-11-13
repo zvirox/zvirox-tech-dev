@@ -23,7 +23,7 @@ image: "/assets/images/ai/voicestudio-hero.webp"
 
 ![VoiceStudio desktop application](/assets/images/ai/voicestudio-hero.webp)
 
-> *Independent review; no affiliation or sponsorship.*
+> *Independent product overview; no sponsorship. Feature descriptions are based on vendor materials and were not independently tested.*
 
 ## VoiceStudio: The Open-Source AI Voice Studio
 
@@ -35,15 +35,15 @@ VoiceStudio's vendor materials describe these voice workflows; availability and 
 
 | # | Feature | What It Does |
 |---|---------|--------------|
-| 01 | **Voice Clone** | Mirror a voice from just three seconds of audio |
+| 01 | **Voice Clone** | Clone a voice; source requirements depend on the selected model |
 | 02 | **Voice Design** | Describe a voice in text — generate it |
-| 03 | **Video Dubbing** | Dub any video into any language, preserving original timing |
+| 03 | **Video Dubbing** | Dub supported video workflows; language coverage depends on the selected model |
 | 04 | **Stories** | Cast a script; voice every role with distinct voices |
 | 05 | **Audiobook** | A book in → chapters out (audiobook creation pipeline) |
 | 06 | **Voice Gallery** | Ready-made voices to try out |
 | 07 | **Transcripts** | Audio in → searchable text out |
 
-Beyond the core features, VoiceStudio includes **WorkflowStudio** (a desktop workflow app), a **Local API** for programmatic access, and an optional **Pro Cloud** hosted tier (early access).
+For current desktop, API, workflow, and hosted-service availability, consult the vendor's [documentation](https://dev.voicestudio.sh/docs) and [product pages](https://dev.voicestudio.sh/).
 
 ### Installation
 
@@ -96,8 +96,8 @@ The desktop application is free and open source under GNU AGPL-3.0. VoiceStudio 
     <tr>
       <td>Refund</td>
       <td>N/A</td>
-      <td>7 days</td>
-      <td>N/A</td>
+      <td>See current refund policy</td>
+      <td>See current plan terms</td>
     </tr>
   </tbody>
 </table>
