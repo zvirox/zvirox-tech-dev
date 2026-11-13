@@ -75,7 +75,7 @@ Even with local tools, follow these practices:
 
 Local voice AI isn't always the right choice. Consider cloud services when:
 
-- You need enterprise-grade voice quality without local GPU
+- You need managed compute or a hosted workflow
 - You need real-time API access from mobile apps
 - Your team needs shared voice libraries across devices
 - You don't have hardware capable of running local models
@@ -109,7 +109,7 @@ For privacy-conscious developers, journalists, and content creators, local voice
       <span style="font-size:18px; line-height:1;">▾</span>
     </button>
     <div class="zv-faq-answer">
-      <p>AGPL-3.0 requires you to release source code if you distribute modified versions. For internal commercial use, it's generally fine. For SaaS products built on VoiceStudio, consider the Pro commercial license.</p>
+      <p>The GNU AGPL has obligations for covered software distribution, and section 13 adds a source-offer condition for modified versions users interact with over a network. Exact obligations depend on the software and how it is used; read the <a href="https://www.gnu.org/licenses/agpl-3.0.html">license text</a> and seek qualified legal advice for a specific use. VoiceStudio also offers separate commercial-license terms; see its <a href="https://dev.voicestudio.sh/faq">current FAQ</a>.</p>
     </div>
   </div>
 </div>
