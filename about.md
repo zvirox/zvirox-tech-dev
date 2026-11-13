@@ -5,6 +5,9 @@ description: Zvirox is an independent open-source software project by Prakashpur
 permalink: /about/
 ---
 
+{% assign alp_release = site.data.release_manifest.projects | where: "id", "alp" | first %}
+{% assign ytf_release = site.data.release_manifest.projects | where: "id", "ytf" | first %}
+
 <div class="zv-container">
 
   <!-- =====================================================
@@ -121,7 +124,7 @@ permalink: /about/
           </h3>
           <p class="zv-card-excerpt">
             A multitrack Linux desktop video editor built with Rust, Tauri, React, and GStreamer. 
-            Includes 440 editor commands, 7 workspaces, a CLI, and an MCP server.
+            Includes hundreds of editor commands, a CLI, and an MCP server. The current count is documented in the project README and command reference.
           </p>
           <div class="zv-project-card-tags">
             <span class="zv-tag">AGPL-3.0 + Commercial</span>
@@ -139,7 +142,7 @@ permalink: /about/
       <article class="zv-card zv-project-card">
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
-            AUDIO WORKSTATION • ALPHA v0.0.1
+            AUDIO WORKSTATION • {{ alp_release.latest.tag_name | default: "ALPHA" | upcase }}
           </div>
           <h3 class="zv-card-title">
             <a href="{{ '/projects/alp/' | relative_url }}">Audio Labs Pro</a>
@@ -189,7 +192,7 @@ permalink: /about/
       <article class="zv-card zv-project-card">
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
-            ANDROID TV • v0.0.3
+            ANDROID TV • {{ ytf_release.latest.tag_name | default: "Releases" }}
           </div>
           <h3 class="zv-card-title">
             <a href="{{ '/projects/ytf/' | relative_url }}">Your TV Friend</a>
