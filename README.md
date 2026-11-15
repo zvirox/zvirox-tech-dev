@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://zvirox.in">
-    <img src="assets/images/zvirox-logo.png" alt="Zvirox Logo" width="280">
+    <img src="assets/images/zvirox-logo.png" alt="Zvirox Logo" width="280" height="104">
   </a>
 </p>
 
