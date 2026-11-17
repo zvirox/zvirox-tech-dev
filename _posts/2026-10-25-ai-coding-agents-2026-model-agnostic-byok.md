@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "AI Coding Agents in 2026: Model-Agnostic Development with BYOK"
+title: "AI Coding Agents 2026: Model-Agnostic & BYOK"
 description: "A 2026 guide to model-agnostic AI coding agents, BYOK, pricing, and how Kilo AI, Cursor, and open-source tools compare."
 date: 2026-10-23
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - AI
 tags:

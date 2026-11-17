@@ -4,7 +4,7 @@ title: "What Is DHCP and How Does It Work?"
 description: "Learn how DHCP assigns IP addresses, how the DORA exchange and leases work, and how rogue DHCP servers can threaten a network."
 date: 2026-09-01
 last_modified_at: 2026-11-13
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - Networking
 tags:

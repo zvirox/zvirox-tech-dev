@@ -29,7 +29,7 @@ permalink: /privacy/
     <div class="zv-content" style="max-width:800px; margin:0 auto;">
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">1. The Website (zvirox.in)</h3>
+        <h2 class="zv-feature-title">1. The Website (zvirox.in)</h2>
         <p class="zv-feature-desc">
           The Zvirox website is a collection of static HTML, CSS, and JavaScript files hosted on GitHub Pages.
         </p>
@@ -42,7 +42,7 @@ permalink: /privacy/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">2. Easy Edits Pro (Desktop Video Editor)</h3>
+        <h2 class="zv-feature-title">2. Easy Edits Pro (Desktop Video Editor)</h2>
         <p class="zv-feature-desc">
           Easy Edits Pro is a local Linux desktop application built with Rust, Tauri, React, and GStreamer.
         </p>
@@ -54,7 +54,7 @@ permalink: /privacy/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">3. Audio Labs Pro (Audio Workstation)</h3>
+        <h2 class="zv-feature-title">3. Audio Labs Pro (Audio Workstation)</h2>
         <p class="zv-feature-desc">
           Audio Labs Pro is an offline-first Linux audio studio built with Rust and iced.
         </p>
@@ -66,7 +66,7 @@ permalink: /privacy/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">4. Your TV Friend (Android TV Launcher & Debloater)</h3>
+        <h2 class="zv-feature-title">4. Your TV Friend (Android TV Launcher & Debloater)</h2>
         <p class="zv-feature-desc">
           Your TV Friend runs locally on Android TV devices.
         </p>
@@ -84,14 +84,14 @@ permalink: /privacy/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">5. Screen Studio Pro (Planned)</h3>
+        <h2 class="zv-feature-title">5. Screen Studio Pro (Planned)</h2>
         <p class="zv-feature-desc">
           Screen Studio Pro is currently in the specification and planning phase. Once application code is implemented, it will adhere strictly to the same local-first, zero-telemetry architecture.
         </p>
       </div>
 
       <div class="zv-feature-card">
-        <h3 class="zv-feature-title">6. Privacy Inquiries & Legal Framework</h3>
+        <h2 class="zv-feature-title">6. Privacy Inquiries & Legal Framework</h2>
         <p class="zv-feature-desc">
           If you have questions regarding this privacy statement, contact Prakashpuri Gauswami at 
           <a href="mailto:info@zvirox.in">info@zvirox.in</a>. Zvirox operates from Gujarat, India, 

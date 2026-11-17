@@ -28,7 +28,7 @@ permalink: /cookies/
     <div class="zv-content" style="max-width:800px; margin:0 auto;">
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">1. No Tracking or Marketing Cookies</h3>
+        <h2 class="zv-feature-title">1. No Tracking or Marketing Cookies</h2>
         <p class="zv-feature-desc">
           We do not use tracking cookies, analytics identifiers, advertising tags, or third-party session beacons. 
           When you browse <code>zvirox.in</code>, your behavior is not tracked or monetized.
@@ -36,7 +36,7 @@ permalink: /cookies/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">2. Browser Local Storage (Theme Preference)</h3>
+        <h2 class="zv-feature-title">2. Browser Local Storage (Theme Preference)</h2>
         <p class="zv-feature-desc">
           To remember whether you prefer Dark Mode or Light Mode across page visits, our site stores a single value 
           in your browser's <code>localStorage</code>:
@@ -68,7 +68,7 @@ permalink: /cookies/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">3. Contact</h3>
+        <h2 class="zv-feature-title">3. Contact</h2>
         <p class="zv-feature-desc">
           If you have questions regarding this policy, contact <a href="mailto:info@zvirox.in">info@zvirox.in</a>.
         </p>

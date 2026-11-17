@@ -8,7 +8,10 @@ author: "Zvirox"
 email: "info@zvirox.in"
 repository: "zvirox/zvirox-tech-dev"
 
-logo: "/assets/images/zvirox-logo.png"
+# NOTE: `logo` is intentionally absent. jekyll-seo-tag uses it to build a
+# `publisher` object whose name comes from the page author; with a real Person
+# author that would mislabel the Organization. Organization markup is emitted
+# explicitly in _layouts/default.html instead.
 image: "/assets/images/zvirox-logo.png"
 
 social:

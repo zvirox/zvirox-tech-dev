@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "VoiceStudio Review: Local AI Voice Cloning and Dubbing"
+title: "VoiceStudio Review: Local AI Voice Cloning"
 description: "An independent overview of VoiceStudio's open-source desktop app, local voice workflows, downloads, licensing, and alternatives to cloud TTS."
 date: 2026-10-23
 last_modified_at: 2026-11-13
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - voice-audio-ai
 redirect_from:

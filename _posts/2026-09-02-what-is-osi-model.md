@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "What Is the OSI Model? A Non-Boring Guide to the 7 Layers"
+title: "What Is the OSI Model? 7 Layers Explained"
 description: "Learn how the OSI Model works, what each of its seven layers does, how data moves through the stack, and how network security applies across the layers."
 date: 2026-09-02
 last_modified_at: 2026-11-13
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - Networking
 tags:

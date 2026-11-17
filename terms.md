@@ -28,7 +28,7 @@ permalink: /terms/
     <div class="zv-content" style="max-width:800px; margin:0 auto;">
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">1. Website Content</h3>
+        <h2 class="zv-feature-title">1. Website Content</h2>
         <p class="zv-feature-desc">
           Articles, guides, code examples, and editorial documentation published on <code>zvirox.in</code> 
           are written by Prakashpuri Gauswami. You are free to cite, reference, and share these materials 
@@ -37,7 +37,7 @@ permalink: /terms/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">2. Software Usage & Licensing</h3>
+        <h2 class="zv-feature-title">2. Software Usage & Licensing</h2>
         <p class="zv-feature-desc">
           All software repositories built under the Zvirox project are licensed individually:
         </p>
@@ -53,7 +53,7 @@ permalink: /terms/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">3. Disclaimer of Warranties</h3>
+        <h2 class="zv-feature-title">3. Disclaimer of Warranties</h2>
         <p class="zv-feature-desc">
           The website, documentation, and open-source applications are provided "AS IS", without warranty of any kind, 
           express or implied, including but not limited to the warranties of merchantability, fitness for a particular 
@@ -63,7 +63,7 @@ permalink: /terms/
       </div>
 
       <div class="zv-feature-card" style="margin-bottom:24px;">
-        <h3 class="zv-feature-title">4. Trademarks & Project Names</h3>
+        <h2 class="zv-feature-title">4. Trademarks & Project Names</h2>
         <p class="zv-feature-desc">
           "Zvirox", "Easy Edits Pro", "Audio Labs Pro", "Screen Studio Pro", and "Your TV Friend" are project names 
           and trademarks maintained by Prakashpuri Gauswami. You may use these names in descriptive text referencing 
@@ -73,7 +73,7 @@ permalink: /terms/
       </div>
 
       <div class="zv-feature-card">
-        <h3 class="zv-feature-title">5. Contact</h3>
+        <h2 class="zv-feature-title">5. Contact</h2>
         <p class="zv-feature-desc">
           For legal inquiries, trademark questions, or commercial licensing requests, please email 
           <a href="mailto:info@zvirox.in">info@zvirox.in</a>.

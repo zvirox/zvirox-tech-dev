@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Running Voice AI Locally: Privacy-First Alternatives to Cloud TTS"
+title: "Local Voice AI: Privacy-First TTS Alternatives"
 description: "An overview of local voice cloning, text-to-speech, and dubbing workflows, with practical privacy checks for models, applications, and hosted services."
 date: 2026-10-23
 last_modified_at: 2026-11-13
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - voice-audio-ai
 redirect_from:

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Kilo AI vs Cursor: Open Source AI Coding Agent Comparison"
+title: "Kilo AI vs Cursor: Open-Source Coding Agents"
 description: "Compare Kilo AI and Cursor, including supported editors, model choices, BYOK, pricing, and open-source licensing."
 date: 2026-10-23
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - AI
 tags:

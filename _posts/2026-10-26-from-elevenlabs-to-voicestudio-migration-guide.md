@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning"
+title: "ElevenLabs to VoiceStudio: Open-Source Migration"
 description: "A practical migration checklist for comparing hosted and local voice AI workflows, licensing, privacy, hardware, and current plan terms."
 date: 2026-10-23
 last_modified_at: 2026-11-13
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - voice-audio-ai
 redirect_from:

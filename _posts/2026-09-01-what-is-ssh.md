@@ -4,7 +4,7 @@ title: "What Is SSH? Secure Shell Explained"
 description: "Learn what SSH is, how Secure Shell works, why it is used for remote access, how SSH authentication works, and how to secure SSH connections."
 date: 2026-09-01
 last_modified_at: 2026-11-13
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - Linux
 tags:

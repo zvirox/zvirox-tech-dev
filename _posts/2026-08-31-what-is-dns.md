@@ -3,7 +3,7 @@ layout: post
 title: "What Is DNS? How the Internet's Phonebook Works"
 description: "Learn how DNS translates domain names into IP addresses, how DNS resolution works, common DNS attacks, and practical ways to secure DNS."
 date: 2026-08-31
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
 categories:
   - Networking
 tags:

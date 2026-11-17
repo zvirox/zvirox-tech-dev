@@ -1,0 +1,7 @@
+# Author metadata for jekyll-seo-tag. Articles reference this by name in their
+# frontmatter (author: "Prakashpuri Gauswami"), which emits a Person entity with
+# a link to the maintainer's About page instead of a brand-as-Person author.
+Prakashpuri Gauswami:
+  name: Prakashpuri Gauswami
+  type: Person
+  url: https://zvirox.in/about/
