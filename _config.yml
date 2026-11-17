@@ -34,6 +34,15 @@ markdown: kramdown
 
 permalink: /:categories/:title/
 
+# jekyll-seo-tag reads `image` from page frontmatter only (site.image is ignored).
+# Give every page a default social-preview image; articles with their own
+# `image:` frontmatter keep their specific hero image.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/zvirox-logo.png
+
 exclude:
   - verge-analysis/
   - tests/

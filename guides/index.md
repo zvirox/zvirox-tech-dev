@@ -71,7 +71,7 @@ redirect_from:
           <p class="zv-card-excerpt">
             Local voice cloning, text-to-speech, audio dubbing, and privacy-first audio tooling running on your own hardware.
           </p>
-          <a href="{{ '/categories/voice-ai/' | relative_url }}" class="zv-section-link">
+          <a href="{{ '/categories/voice-audio-ai/' | relative_url }}" class="zv-section-link">
             Explore topic →
           </a>
         </div>

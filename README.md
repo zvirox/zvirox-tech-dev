@@ -97,11 +97,12 @@ zvirox-tech-dev/
 
 ## 🔍 Google Search Console & SEO
 
-This website includes a dedicated, validated XML sitemap structured for **Google Search Console** and Bing Webmaster Tools:
+This website generates a single authoritative XML sitemap via `jekyll-sitemap`, structured for **Google Search Console** and Bing Webmaster Tools:
 
-- **Primary Submission URL:** `https://zvirox.in/sitemap/sitemap.xml`
-- **Fallback URL:** `https://zvirox.in/sitemap.xml`
+- **Submission URL:** `https://zvirox.in/sitemap.xml`
 - **Visual Directory:** `https://zvirox.in/sitemap/`
+
+The old `/sitemap/sitemap.xml` path is retired and returns 404 — do not submit it. `robots.txt` and `llms.txt` advertise only `/sitemap.xml`.
 
 ### Features:
 - 100% canonical HTTPS endpoints with accurate W3C `lastmod` timestamps.
