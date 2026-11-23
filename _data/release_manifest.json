@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T21:26:36Z",
+  "generated_at": "2026-11-23T05:11:21Z",
   "projects": [
     {
       "id": "eep",
@@ -94,46 +94,60 @@
       "releases_url": "https://github.com/zvirox/audio-labs-pro/releases",
       "status": "available",
       "latest": {
-        "tag_name": "v0.0.1-alpha.5",
-        "name": "Audio Labs Pro v0.0.1-alpha.5",
-        "published_at": "2026-11-22T04:44:04Z",
-        "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.5",
+        "tag_name": "v0.0.1-alpha.7",
+        "name": "Audio Labs Pro v0.0.1-alpha.7",
+        "published_at": "2026-11-23T05:00:34Z",
+        "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.7",
         "prerelease": true,
-        "summary": "Audio Labs Pro v0.0.1-alpha.5 — voice audio workstation for Linux. Packages `.deb` — Debian/Ubuntu (amd64) `.rpm` — Fedora/openSUSE (x86_64) `.flatpak` — any distribution (Freedesktop 25.08 runtime) Verify with `sha256sums.txt`. See CHANGEL...",
+        "summary": "Audio Labs Pro v0.0.1-alpha.7 — voice audio workstation for Linux. Packages `.deb` — Debian/Ubuntu (amd64) `.rpm` — Fedora/openSUSE (x86_64) `.flatpak` — any distribution (Freedesktop 25.08 runtime) Verify with `sha256sums.txt`. See CHANGEL...",
         "assets": [
           {
             "rule_id": "flatpak",
             "label": "Flatpak (Universal)",
             "platform": "Linux (All Distros)",
             "icon": "box",
-            "name": "Audio-Labs-Pro-0.0.1-alpha.5-x86_64.flatpak",
-            "size": 21859792,
-            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.5/Audio-Labs-Pro-0.0.1-alpha.5-x86_64.flatpak",
-            "sha256": "0d12656efd3b05a5c769541a6c43e18918c0a9700e1f7b13fc05a5e9391b01b4"
+            "name": "Audio-Labs-Pro-0.0.1-alpha.7-x86_64.flatpak",
+            "size": 21874672,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.7/Audio-Labs-Pro-0.0.1-alpha.7-x86_64.flatpak",
+            "sha256": "94dd56b5f69cce6beb3848016232f67901e31baaee6eb4cbd2ad4c15a0a6f454"
           },
           {
             "rule_id": "deb",
             "label": "DEB Package",
             "platform": "Debian / Ubuntu / Mint",
             "icon": "package",
-            "name": "audio-labs-pro_0.0.1-alpha.5_amd64.deb",
-            "size": 26772814,
-            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.5/audio-labs-pro_0.0.1-alpha.5_amd64.deb",
-            "sha256": "628d0e9987bfa7f19e11dc15e3262954c719f592ccd1f5cdb9b84bf14f3ea198"
+            "name": "audio-labs-pro_0.0.1-alpha.7_amd64.deb",
+            "size": 26834414,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.7/audio-labs-pro_0.0.1-alpha.7_amd64.deb",
+            "sha256": "98e1753e6bfd79303c669153a275b6d7599c972a7dc535292114f9d7ecc4c1e5"
           },
           {
             "rule_id": "rpm",
             "label": "RPM Package",
             "platform": "Fedora / RHEL / openSUSE",
             "icon": "package",
-            "name": "audio-labs-pro-0.0.1.alpha.5-1.x86_64.rpm",
-            "size": 36449055,
-            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.5/audio-labs-pro-0.0.1.alpha.5-1.x86_64.rpm",
-            "sha256": "73782062ec5ed09aa0e1bebb0543371458303183f4c2fb55ee2c1a71dc5257bc"
+            "name": "audio-labs-pro-0.0.1.alpha.7-1.x86_64.rpm",
+            "size": 36508999,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.7/audio-labs-pro-0.0.1.alpha.7-1.x86_64.rpm",
+            "sha256": "947d9eda16592d596d83cef9ad0f32e1aea0ca2080f0deef6ac8e71041d372f4"
           }
         ]
       },
       "history": [
+        {
+          "tag_name": "v0.0.1-alpha.7",
+          "name": "Audio Labs Pro v0.0.1-alpha.7",
+          "published_at": "2026-11-23T05:00:34Z",
+          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.7",
+          "prerelease": true
+        },
+        {
+          "tag_name": "v0.0.1-alpha.6",
+          "name": "Audio Labs Pro v0.0.1-alpha.6",
+          "published_at": "2026-11-23T04:59:51Z",
+          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.6",
+          "prerelease": true
+        },
         {
           "tag_name": "v0.0.1-alpha.5",
           "name": "Audio Labs Pro v0.0.1-alpha.5",
@@ -153,20 +167,6 @@
           "name": "Audio Labs Pro v0.0.1-alpha.3",
           "published_at": "2026-11-08T08:37:13Z",
           "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.3",
-          "prerelease": true
-        },
-        {
-          "tag_name": "v0.0.1-alpha.2",
-          "name": "Audio Labs Pro v0.0.1-alpha.2",
-          "published_at": "2026-10-29T03:29:17Z",
-          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.2",
-          "prerelease": true
-        },
-        {
-          "tag_name": "v0.0.1-alpha.1",
-          "name": "Audio Labs Pro v0.0.1-alpha.1",
-          "published_at": "2026-10-28T10:52:26Z",
-          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.1",
           "prerelease": true
         }
       ]
