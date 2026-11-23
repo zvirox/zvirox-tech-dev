@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T05:11:21Z",
+  "generated_at": "2026-11-23T19:43:54Z",
   "projects": [
     {
       "id": "eep",
@@ -9,12 +9,12 @@
       "releases_url": "https://github.com/zvirox/easy-edits-pro/releases",
       "status": "available",
       "latest": {
-        "tag_name": "v0.1.3-beta.1",
-        "name": "Easy Edits Pro v0.1.3-beta.1",
-        "published_at": "2026-11-14T09:44:19Z",
-        "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.3-beta.1",
+        "tag_name": "v0.1.3-beta.2",
+        "name": "Easy Edits Pro v0.1.3-beta.2",
+        "published_at": "2026-11-23T16:13:58Z",
+        "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.3-beta.2",
         "prerelease": true,
-        "summary": "Easy Edits Pro v0.1.3-beta.1 Welcome to Easy Edits Pro v0.1.3-beta.1 — our first official Beta release! This milestone closes out the comprehensive UI Layout & Workspace Consistency Remediation Plan (`UI-P0..UI-P7`), brings full responsive...",
+        "summary": "Easy Edits Pro v0.1.3-beta.2 This is the second beta, following `v0.1.3-beta.1`. It adds the authenticated long-lived `saturn-control` daemon, the Task Sheet web stack (daemon API, Web Desk, runner and enterprise SSO), and a larger agent ha...",
         "assets": [
           {
             "rule_id": "flatpak",
@@ -22,33 +22,40 @@
             "platform": "Linux (All Distros)",
             "icon": "box",
             "name": "easy-edits-pro-linux-x86_64.flatpak",
-            "size": 16606496,
-            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.3-beta.1/easy-edits-pro-linux-x86_64.flatpak",
-            "sha256": "c6b6ddea8508211fd2781159775972489fe7d1c81d948c92eb600c77b7085be9"
+            "size": 16626888,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.3-beta.2/easy-edits-pro-linux-x86_64.flatpak",
+            "sha256": "dc5b3832c6fdafcfb0609c164a28a5d547a434a68e595687f1eeece0f3d5b28b"
           },
           {
             "rule_id": "deb",
             "label": "DEB Package",
             "platform": "Debian / Ubuntu / Mint",
             "icon": "package",
-            "name": "Easy.Edits.Pro_0.1.3-beta.1_amd64.deb",
-            "size": 25741552,
-            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.3-beta.1/Easy.Edits.Pro_0.1.3-beta.1_amd64.deb",
-            "sha256": "1b201917441f5b6181d983b4c43d6a8872ecbe170a608797551e779f67d33c9d"
+            "name": "Easy.Edits.Pro_0.1.3-beta.2_amd64.deb",
+            "size": 25760520,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.3-beta.2/Easy.Edits.Pro_0.1.3-beta.2_amd64.deb",
+            "sha256": "272785120d1ed2f5ff72260b96cee4fa3fdd2b69b0b5a1cdbfc109547900405f"
           },
           {
             "rule_id": "rpm",
             "label": "RPM Package",
             "platform": "Fedora / RHEL / openSUSE",
             "icon": "package",
-            "name": "Easy.Edits.Pro-0.1.3-beta.1-1.x86_64.rpm",
-            "size": 25817582,
-            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.3-beta.1/Easy.Edits.Pro-0.1.3-beta.1-1.x86_64.rpm",
-            "sha256": "b785c4bf586c84744ec78f662ec65fbd516ff977cd8378ce0d274591dfd3a405"
+            "name": "Easy.Edits.Pro-0.1.3-beta.2-1.x86_64.rpm",
+            "size": 25837498,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.3-beta.2/Easy.Edits.Pro-0.1.3-beta.2-1.x86_64.rpm",
+            "sha256": "766e8d8dbc2ff6cb7ff6b24a6a2344a08ad15481dd713ae7acde08061440dbfb"
           }
         ]
       },
       "history": [
+        {
+          "tag_name": "v0.1.3-beta.2",
+          "name": "Easy Edits Pro v0.1.3-beta.2",
+          "published_at": "2026-11-23T16:13:58Z",
+          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.3-beta.2",
+          "prerelease": true
+        },
         {
           "tag_name": "v0.1.3-beta.1",
           "name": "Easy Edits Pro v0.1.3-beta.1",
@@ -76,13 +83,6 @@
           "published_at": "2026-11-11T07:14:01Z",
           "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.2-alpha.6",
           "prerelease": true
-        },
-        {
-          "tag_name": "v0.1.2-alpha.5",
-          "name": "Easy Edits Pro v0.1.2-alpha.5",
-          "published_at": "2026-11-09T14:25:05Z",
-          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.2-alpha.5",
-          "prerelease": true
         }
       ]
     },
@@ -94,46 +94,60 @@
       "releases_url": "https://github.com/zvirox/audio-labs-pro/releases",
       "status": "available",
       "latest": {
-        "tag_name": "v0.0.1-alpha.7",
-        "name": "Audio Labs Pro v0.0.1-alpha.7",
-        "published_at": "2026-11-23T05:00:34Z",
-        "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.7",
+        "tag_name": "v0.0.1-alpha.9",
+        "name": "Audio Labs Pro v0.0.1-alpha.9",
+        "published_at": "2026-11-23T14:43:12Z",
+        "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.9",
         "prerelease": true,
-        "summary": "Audio Labs Pro v0.0.1-alpha.7 — voice audio workstation for Linux. Packages `.deb` — Debian/Ubuntu (amd64) `.rpm` — Fedora/openSUSE (x86_64) `.flatpak` — any distribution (Freedesktop 25.08 runtime) Verify with `sha256sums.txt`. See CHANGEL...",
+        "summary": "Audio Labs Pro v0.0.1-alpha.9 — voice audio workstation for Linux. Packages `.deb` — Debian/Ubuntu (amd64) `.rpm` — Fedora/openSUSE (x86_64) `.flatpak` — any distribution (Freedesktop 25.08 runtime) Verify with `sha256sums.txt`. See CHANGEL...",
         "assets": [
           {
             "rule_id": "flatpak",
             "label": "Flatpak (Universal)",
             "platform": "Linux (All Distros)",
             "icon": "box",
-            "name": "Audio-Labs-Pro-0.0.1-alpha.7-x86_64.flatpak",
-            "size": 21874672,
-            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.7/Audio-Labs-Pro-0.0.1-alpha.7-x86_64.flatpak",
-            "sha256": "94dd56b5f69cce6beb3848016232f67901e31baaee6eb4cbd2ad4c15a0a6f454"
+            "name": "Audio-Labs-Pro-0.0.1-alpha.9-x86_64.flatpak",
+            "size": 15958752,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.9/Audio-Labs-Pro-0.0.1-alpha.9-x86_64.flatpak",
+            "sha256": "82a4a77fbb118888f8d6143886d6a98ab9ca5934e0a254f28288b590f20f4ea9"
           },
           {
             "rule_id": "deb",
             "label": "DEB Package",
             "platform": "Debian / Ubuntu / Mint",
             "icon": "package",
-            "name": "audio-labs-pro_0.0.1-alpha.7_amd64.deb",
-            "size": 26834414,
-            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.7/audio-labs-pro_0.0.1-alpha.7_amd64.deb",
-            "sha256": "98e1753e6bfd79303c669153a275b6d7599c972a7dc535292114f9d7ecc4c1e5"
+            "name": "audio-labs-pro_0.0.1-alpha.9_amd64.deb",
+            "size": 20935690,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.9/audio-labs-pro_0.0.1-alpha.9_amd64.deb",
+            "sha256": "1878d0fc377b1bab9084e91bcd5ca3634e946a93c930ccfb5d6ea98366c823fd"
           },
           {
             "rule_id": "rpm",
             "label": "RPM Package",
             "platform": "Fedora / RHEL / openSUSE",
             "icon": "package",
-            "name": "audio-labs-pro-0.0.1.alpha.7-1.x86_64.rpm",
-            "size": 36508999,
-            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.7/audio-labs-pro-0.0.1.alpha.7-1.x86_64.rpm",
-            "sha256": "947d9eda16592d596d83cef9ad0f32e1aea0ca2080f0deef6ac8e71041d372f4"
+            "name": "audio-labs-pro-0.0.1.alpha.9-1.x86_64.rpm",
+            "size": 29064171,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.9/audio-labs-pro-0.0.1.alpha.9-1.x86_64.rpm",
+            "sha256": "2838c73581e45881207a3f6f319f46cd7bd499099115c447562e8073e718a539"
           }
         ]
       },
       "history": [
+        {
+          "tag_name": "v0.0.1-alpha.9",
+          "name": "Audio Labs Pro v0.0.1-alpha.9",
+          "published_at": "2026-11-23T14:43:12Z",
+          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.9",
+          "prerelease": true
+        },
+        {
+          "tag_name": "v0.0.1-alpha.8",
+          "name": "Audio Labs Pro v0.0.1-alpha.8",
+          "published_at": "2026-11-23T11:37:41Z",
+          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.8",
+          "prerelease": true
+        },
         {
           "tag_name": "v0.0.1-alpha.7",
           "name": "Audio Labs Pro v0.0.1-alpha.7",
@@ -153,20 +167,6 @@
           "name": "Audio Labs Pro v0.0.1-alpha.5",
           "published_at": "2026-11-22T04:44:04Z",
           "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.5",
-          "prerelease": true
-        },
-        {
-          "tag_name": "v0.0.1-alpha.4",
-          "name": "Audio Labs Pro v0.0.1-alpha.4",
-          "published_at": "2026-11-21T16:40:06Z",
-          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.4",
-          "prerelease": true
-        },
-        {
-          "tag_name": "v0.0.1-alpha.3",
-          "name": "Audio Labs Pro v0.0.1-alpha.3",
-          "published_at": "2026-11-08T08:37:13Z",
-          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.3",
           "prerelease": true
         }
       ]
