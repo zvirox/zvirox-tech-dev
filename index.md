@@ -19,7 +19,7 @@ permalink: /
     <div class="zv-hero-content">
 
       <div class="zv-card-category">
-        OPEN-SOURCE SOFTWARE • LINUX • ANDROID TV
+        Open-source software · Linux · Android TV
       </div>
 
       <h1>
@@ -78,7 +78,7 @@ permalink: /
     <div class="zv-section-header">
       <div>
         <div class="zv-card-category">
-          SOFTWARE PORTFOLIO
+          Software portfolio
         </div>
         <h2 class="zv-section-title">
           Open-Source Projects
@@ -322,7 +322,7 @@ permalink: /
     <div class="zv-section-header">
       <div>
         <div class="zv-card-category">
-          ENGINEERING PRINCIPLES
+          Engineering principles
         </div>
         <h2 class="zv-section-title">
           Why Zvirox
@@ -394,7 +394,7 @@ permalink: /
     <div class="zv-section-header">
       <div>
         <div class="zv-card-category">
-          CODEBASE METRICS
+          Codebase metrics
         </div>
         <h2 class="zv-section-title">
           By the Numbers
@@ -449,7 +449,7 @@ permalink: /
 
       <div class="zv-teaser-content">
         <div class="zv-card-category">
-          PER-PROJECT LICENSING
+          Per-project licensing
         </div>
         <h2 class="zv-teaser-title">
           Transparent, per-project open-source licensing.
@@ -478,7 +478,7 @@ permalink: /
 
       <div>
         <div class="zv-card-category">
-          TECHNICAL WRITING
+          Technical writing
         </div>
         <h2 class="zv-section-title">
           Latest Guides
@@ -560,7 +560,7 @@ permalink: /
       <div class="zv-hero-content" style="max-width:760px;">
 
         <div class="zv-card-category">
-          COMMUNITY & CODE
+          Community & code
         </div>
 
         <h2>

@@ -77,7 +77,7 @@ image: "/assets/images/projects/screen-studio-pro-mockup.webp"
       <div class="zv-teardown-schematic" aria-label="Screen Studio Pro Architecture Teardown">
         <div class="zv-teardown-header">
           <div class="zv-teardown-title-wrap">
-            <span class="zv-teardown-category">WAYLAND CAPTURE TEARDOWN</span>
+            <span class="zv-teardown-category">Wayland capture teardown</span>
             <span class="zv-teardown-subtitle">xdg-desktop-portal · PipeWire DMA-BUF · Rust Crash-Safe Remux</span>
           </div>
           <span class="zv-teardown-shield">🔒 ZERO CLOUD LEAK</span>

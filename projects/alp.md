@@ -92,7 +92,7 @@ image: "/assets/images/projects/audio-labs-pro-mockup.webp"
       <div class="zv-teardown-schematic" aria-label="Audio Labs Pro Architecture Teardown">
         <div class="zv-teardown-header">
           <div class="zv-teardown-title-wrap">
-            <span class="zv-teardown-category">DSP PIPELINE TEARDOWN</span>
+            <span class="zv-teardown-category">DSP pipeline teardown</span>
             <span class="zv-teardown-subtitle">Lock-Free Audio Thread · CLAP/LV2 Host · Local ONNX AI</span>
           </div>
           <span class="zv-teardown-shield">🔒 ZERO AUDIO EGRESS</span>

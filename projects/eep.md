@@ -77,7 +77,7 @@ image: "/assets/images/projects/easy-edits-pro-mockup.webp"
       <div class="zv-teardown-schematic" aria-label="Easy Edits Pro Architecture Teardown">
         <div class="zv-teardown-header">
           <div class="zv-teardown-title-wrap">
-            <span class="zv-teardown-category">PIPELINE TEARDOWN</span>
+            <span class="zv-teardown-category">Pipeline teardown</span>
             <span class="zv-teardown-subtitle">Rust Core · Tauri 2 IPC · GStreamer HW Accel</span>
           </div>
           <span class="zv-teardown-shield">🔒 AIRGAPPED LOCAL DISK</span>

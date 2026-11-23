@@ -100,7 +100,7 @@ permalink: /about/
     <div class="zv-section-header">
       <div>
         <div class="zv-card-category">
-          SOFTWARE PORTFOLIO
+          Software portfolio
         </div>
         <h2 class="zv-section-title">
           What We Build
