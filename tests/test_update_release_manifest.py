@@ -9,7 +9,8 @@ from scripts.update_release_manifest import (
     build_manifest,
     write_manifest_atomic,
     sanitize_release_notes,
-    extract_checksum
+    extract_checksum,
+    detect_release_channel
 )
 
 
@@ -21,6 +22,9 @@ class TestUpdateReleaseManifest(unittest.TestCase):
         self.eep_product = next(p for p in self.products if p["id"] == "eep")
         self.alp_product = next(p for p in self.products if p["id"] == "alp")
         self.ssp_product = next(p for p in self.products if p["id"] == "ssp")
+        self.sc_product = next(p for p in self.products if p["id"] == "sc")
+        self.atp_product = next(p for p in self.products if p["id"] == "atp")
+        self.nwp_product = next(p for p in self.products if p["id"] == "nwp")
         self.ytf_product = next(p for p in self.products if p["id"] == "ytf")
 
     def test_draft_exclusion(self):
@@ -53,8 +57,8 @@ class TestUpdateReleaseManifest(unittest.TestCase):
     def test_prerelease_ignored_when_not_allowed(self):
         with open(self.fixtures_dir / "prerelease_and_draft.json", "r", encoding="utf-8") as f:
             releases = json.load(f)
-        # SSP does NOT allow prerelease
-        normalized = normalize_project(self.ssp_product, releases)
+        stable_only_product = dict(self.ssp_product, allow_prerelease=False)
+        normalized = normalize_project(stable_only_product, releases)
         self.assertIsNone(normalized["latest"])
         self.assertEqual(normalized["status"], "planning")
 
@@ -71,15 +75,32 @@ class TestUpdateReleaseManifest(unittest.TestCase):
             releases = json.load(f)
         normalized = normalize_project(self.eep_product, releases)
         assets = normalized["latest"]["assets"]
-        # Should have flatpak, deb, and rpm
+        # Should have arch, deb, and rpm
         asset_ids = [a["rule_id"] for a in assets]
-        self.assertIn("flatpak", asset_ids)
+        self.assertIn("arch", asset_ids)
         self.assertIn("deb", asset_ids)
         self.assertIn("rpm", asset_ids)
         # Verify sizes are integers > 0
         for a in assets:
             self.assertGreater(a["size"], 0)
             self.assertTrue(a["browser_download_url"].startswith("https://"))
+
+    def test_release_channel_classification(self):
+        self.assertEqual(detect_release_channel("v0.1.0-beta.1", True), "beta")
+        self.assertEqual(detect_release_channel("v0.9.2-beta.5", True), "beta")
+        self.assertEqual(detect_release_channel("v0.1.0-alpha.3", True), "alpha")
+        self.assertEqual(detect_release_channel("v1.0.0-rc.1", True), "rc")
+        self.assertEqual(detect_release_channel("v0.0.3", False), "stable")
+
+    def test_seven_products_catalog_structure(self):
+        self.assertEqual(len(self.products), 7)
+        linux_apps = [p for p in self.products if p["category"] == "linux"]
+        android_apps = [p for p in self.products if p["category"] == "android"]
+        self.assertEqual(len(linux_apps), 6)
+        self.assertEqual(len(android_apps), 1)
+        for app in linux_apps:
+            self.assertTrue(app["logo"])
+        self.assertIsNone(android_apps[0]["logo"])
 
     def test_checksum_extraction(self):
         asset = {

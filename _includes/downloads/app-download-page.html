@@ -1,0 +1,38 @@
+{% assign product = site.data.download_products | where: "id", include.app_id | first %}
+{% assign manifest_proj = site.data.release_manifest.projects | where: "id", include.app_id | first %}
+
+<div class="zv-container zv-page-container">
+  <nav class="zv-dl-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/downloads/' | relative_url }}">Downloads</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ product.name }}</span>
+  </nav>
+
+  {% include downloads/project-section.html product=product manifest_proj=manifest_proj %}
+
+  <aside class="zv-integrity-card">
+    <div class="zv-integrity-header">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="zv-integrity-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div>
+        <h2 class="zv-integrity-title">Verify Before Running</h2>
+        <p class="zv-integrity-sub">Check every downloaded package locally against GitHub's SHA-256 digest.</p>
+      </div>
+    </div>
+    <div class="zv-integrity-body">
+      <div class="zv-integrity-step">
+        <span class="zv-step-number">1</span>
+        <div>
+          <strong>Match SHA-256 Hash</strong>
+          <p>Run <code>sha256sum &lt;downloaded-file&gt;</code> in your terminal and compare it with the checksum printed inside the card above.</p>
+        </div>
+      </div>
+      <div class="zv-integrity-step">
+        <span class="zv-step-number">2</span>
+        <div>
+          <strong>Check Source Builds</strong>
+          <p>All packages come straight from tagged GitHub Actions runs using <code>release-workflows</code> with open git commits.</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>

@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Screen Studio Pro
-description: A planned open-source Wayland screen recorder for Linux, with PipeWire capture, webcam picture-in-picture, and hardware-first encoding.
+description: Clean, fast screen recording built natively for Wayland and X11 on Linux with PipeWire capture and hardware encoding.
 permalink: /projects/ssp/
-image: "/assets/images/projects/screen-studio-pro-mockup.webp"
+redirect_from:
+  - /projects/screen-studio-pro/
+image: "/assets/images/logos/screen-studio-pro.png"
 ---
 
 <script type="application/ld+json">
@@ -13,10 +15,15 @@ image: "/assets/images/projects/screen-studio-pro-mockup.webp"
   "name": "Screen Studio Pro",
   "operatingSystem": "Linux",
   "applicationCategory": "MultimediaApplication",
-  "description": "A planned open-source Wayland screen recorder for Linux, with PipeWire capture, webcam picture-in-picture, and hardware-first encoding.",
+  "description": "Fast screen recording studio built natively for Linux Wayland and X11 desktops with PipeWire, webcam picture-in-picture, and hardware encoding.",
   "url": "https://zvirox.in/projects/ssp/",
-  "downloadUrl": "https://github.com/zvirox/screen-studio-pro",
+  "downloadUrl": "https://zvirox.in/downloads/ssp/",
   "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
   "author": {
     "@type": "Person",
     "name": "Prakashpuri Gauswami",
@@ -30,42 +37,23 @@ image: "/assets/images/projects/screen-studio-pro-mockup.webp"
   <article class="zv-post zv-project-page">
     <a class="zv-project-back" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
 
-    <section class="zv-project-hero" aria-labelledby="project-title">
-      <header class="zv-project-intro">
-        <h1 class="zv-post-title" id="project-title">Screen Studio Pro</h1>
-        <p class="zv-post-description">A modern, open-source screen recorder for Linux: a frosted-glass alternative to OBS, designed for Wayland desktops.</p>
-        <p class="zv-project-status">Linux screen recorder · Planning phase</p>
-        <div class="zv-project-tags" aria-label="Technologies"><span class="zv-tag">Linux</span> <span class="zv-tag">Wayland</span> <span class="zv-tag">Rust</span> <span class="zv-tag">Tauri 2</span> <span class="zv-tag">React</span> <span class="zv-tag">PipeWire</span></div>
-        <div class="zv-project-actions">
-          <a href="https://github.com/zvirox/screen-studio-pro" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary">View on GitHub <span aria-hidden="true">↗</span></a>
-          <a href="{{ '/projects/' | relative_url }}" class="zv-project-text-link">Explore all projects <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </header>
-            <figure class="zv-project-visual">
-        <picture>
-          <source type="image/webp" srcset="{{ '/assets/images/projects/screen-studio-pro-mockup.webp' | relative_url }}">
-          <img class="zv-project-image" src="{{ '/assets/images/projects/screen-studio-pro-mockup.png' | relative_url }}" alt="Screen Studio Pro concept capture window with monitor, window, and region sources, microphone and system audio meters, a webcam preview, encoding settings, and floating recording controls." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
-        </picture>
-        <figcaption class="zv-project-caption">Concept mockup based on Screen Studio Pro's planned Wayland recording workflow.</figcaption>
-      </figure>
-    </section>
+    {% assign ssp_tags = "Rust,Tauri 2,React 19,PipeWire,Wayland / X11,FFmpeg" | split: "," %}
+    {% include projects/project-hero.html app_id="ssp" tags=ssp_tags %}
 
     <div class="zv-post-content zv-project-content">
       <h2>Overview</h2>
       <p>
-        <strong>Screen Studio Pro</strong> is a planned Linux screen recorder for Wayland desktops, including Hyprland,
-        niri, MangoWC, and KDE. Its product direction pairs native capture with a polished frosted-glass interface.
-        The repository currently contains the product specifications; application code and a runnable build do not exist yet.
+        <strong>Screen Studio Pro</strong> gives Wayland and X11 Linux users a focused capture studio without bloated streaming scenes. Pick a full monitor, single window, or custom box through native desktop portals, balance microphone and desktop sound levels, float a webcam overlay, and save clean MP4 or MKV videos directly to disk.
       </p>
 
-      <h2>Planned MVP Features</h2>
+      <h2>Core Features</h2>
       <ul>
-        <li><strong>Screen capture:</strong> Monitor, window, and region recording through xdg-desktop-portal and PipeWire.</li>
-        <li><strong>Audio and webcam:</strong> Microphone and desktop audio controls, plus draggable webcam picture-in-picture.</li>
-        <li><strong>Recording controls:</strong> A floating HUD for recording, pause, resume, markers, and stop.</li>
-        <li><strong>Encoding:</strong> Prefer VAAPI or NVENC hardware encoding, with x264 fallback and a visible notice.</li>
-        <li><strong>Safer recordings:</strong> Record to MKV and remux to MP4 on stop, so an interrupted recording keeps its file.</li>
-        <li><strong>Local library:</strong> Browse past recordings and their duration, size, and encoder details.</li>
+        <li><strong>Wayland &amp; X11 Portals:</strong> Works across Hyprland, niri, KDE Plasma, GNOME, MangoWC, and X11 via PipeWire and xdg-desktop-portal.</li>
+        <li><strong>Dual Audio + Webcam PiP:</strong> Mix mic and desktop audio with live gain meters while floating a circular or rounded camera bubble.</li>
+        <li><strong>Floating Recording HUD:</strong> Pause, insert chapter markers, or stop recordings from a compact desktop capsule.</li>
+        <li><strong>Hardware-First Encoding:</strong> Supports VAAPI and NVENC GPU acceleration with x264 fallback.</li>
+        <li><strong>Crash-Safe Recordings:</strong> Writes to Matroska (MKV) first and remuxes cleanly to MP4 on stop so interrupted captures keep their footage.</li>
+        <li><strong>Built-In Recording Library:</strong> Browse takes with auto thumbnails and hand clips straight to Easy Edits Pro or Starship Control.</li>
       </ul>
 
       <h2>Technology Direction & Capture Architecture</h2>
@@ -169,28 +157,27 @@ image: "/assets/images/projects/screen-studio-pro-mockup.webp"
       </div>
 
       <p>
-        The planned desktop app uses a Rust capture and encoding core, Tauri 2, and a React with TypeScript interface.
-        PipeWire and portals handle Wayland capture; SQLite stores a local recording library. The repository states that
-        the app will have no server, HTTP APIs, or telemetry.
+        Screen Studio Pro pairs a Rust capture and FFmpeg encoding core with Tauri 2 and a React 19 interface. PipeWire and native desktop portals stream screen frames locally with zero telemetry or network listeners.
       </p>
 
       <h2>Current Status</h2>
       <p>
-        The project is in the planning phase. Its product brief, design system, architecture, database schema, and API
-        contract are specified, and implementation is planned to begin with the approved MVP milestone plan. There is
-        currently no buildable application or available release.
+        Screen Studio Pro is now in <strong>Public Beta</strong> ({% assign ssp_rel = site.data.release_manifest.projects | where: "id", "ssp" | first %}{{ ssp_rel.latest.tag_name | default: "v0.1.0-beta.1" }}), shipping `.deb`, `.rpm`, and Arch Linux packages built from tagged releases.
       </p>
 
-      <h2>Resources & Links</h2>
+      <h2>Resources &amp; Downloads</h2>
       <ul>
-        <li>Repository: <a href="https://github.com/zvirox/screen-studio-pro" target="_blank" rel="noopener noreferrer">Screen Studio Pro on GitHub</a></li>
-        <li>Specifications: See the repository's PRD, design, and architecture documents.</li>
+        <li><a href="{{ '/downloads/ssp/' | relative_url }}">Download Linux Packages (.deb, .rpm, Arch)</a></li>
+        <li><a href="https://github.com/zvirox/screen-studio-pro" target="_blank" rel="noopener noreferrer">Source Code on GitHub ↗</a></li>
       </ul>
     </div>
 
     <nav class="zv-project-navigation" aria-label="Project navigation">
-      <a href="{{ '/projects/' | relative_url }}" class="zv-section-link">
-        Back to Projects Index &rarr;
+      <a href="{{ '/projects/sc/' | relative_url }}" class="zv-section-link">
+        &larr; Previous: Starship Control
+      </a>
+      <a href="{{ '/projects/eep/' | relative_url }}" class="zv-section-link">
+        Next: Easy Edits Pro &rarr;
       </a>
     </nav>
 

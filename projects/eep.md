@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Easy Edits Pro
-description: An alpha-stage Linux desktop video editor built with Rust, Tauri, React, and GStreamer. Combines multitrack editing with a Rust-owned project model.
+description: Fast, non-destructive multitrack video editor built natively for Linux with Rust, Tauri 2, React 19, and GStreamer.
 permalink: /projects/eep/
-image: "/assets/images/projects/easy-edits-pro-mockup.webp"
+redirect_from:
+  - /projects/easy-edits-pro/
+image: "/assets/images/logos/easy-edits-pro.png"
 ---
 
 <script type="application/ld+json">
@@ -13,10 +15,15 @@ image: "/assets/images/projects/easy-edits-pro-mockup.webp"
   "name": "Easy Edits Pro",
   "operatingSystem": "Linux",
   "applicationCategory": "MultimediaApplication",
-  "description": "An alpha-stage Linux desktop video editor built with Rust, Tauri, React, and GStreamer. Combines multitrack editing with a Rust-owned project model and Model Context Protocol (MCP) automation.",
+  "description": "Non-destructive multitrack Linux video editor built with Rust, Tauri 2, React 19, and GStreamer.",
   "url": "https://zvirox.in/projects/eep/",
-  "downloadUrl": "https://github.com/zvirox/easy-edits-pro/releases",
+  "downloadUrl": "https://zvirox.in/downloads/eep/",
   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
   "author": {
     "@type": "Person",
     "name": "Prakashpuri Gauswami",
@@ -30,25 +37,8 @@ image: "/assets/images/projects/easy-edits-pro-mockup.webp"
   <article class="zv-post zv-project-page">
     <a class="zv-project-back" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
 
-    <section class="zv-project-hero" aria-labelledby="project-title">
-      <header class="zv-project-intro">
-        <h1 class="zv-post-title" id="project-title">Easy Edits Pro</h1>
-        <p class="zv-post-description">An alpha-stage Linux desktop video editor built with Rust, Tauri, React, and GStreamer. It combines a multitrack editing workflow with a Rust-owned project model and automation interfaces.</p>
-        <p class="zv-project-status">Desktop video editor · Active alpha development</p>
-        <div class="zv-project-tags" aria-label="Technologies"><span class="zv-tag">Rust</span> <span class="zv-tag">Tauri</span> <span class="zv-tag">React</span> <span class="zv-tag">GStreamer</span> <span class="zv-tag">Linux</span></div>
-        <div class="zv-project-actions">
-          <a href="https://github.com/zvirox/easy-edits-pro" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary">View on GitHub <span aria-hidden="true">↗</span></a>
-          <a href="{{ '/projects/' | relative_url }}" class="zv-project-text-link">Explore all projects <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </header>
-            <figure class="zv-project-visual">
-        <picture>
-          <source type="image/webp" srcset="{{ '/assets/images/projects/easy-edits-pro-mockup.webp' | relative_url }}">
-          <img class="zv-project-image" src="{{ '/assets/images/projects/easy-edits-pro-mockup.png' | relative_url }}" alt="Conceptual Easy Edits Pro video editor with a mountain lake preview, media bin, inspector, and multitrack timeline." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
-        </picture>
-        <figcaption class="zv-project-caption">Concept mockup based on Easy Edits Pro's video editing workspaces.</figcaption>
-      </figure>
-    </section>
+    {% assign eep_tags = "Rust,Tauri 2,React 19,GStreamer,Linux,MCP" | split: "," %}
+    {% include projects/project-hero.html app_id="eep" tags=eep_tags %}
 
     <div class="zv-post-content zv-project-content">
       <h2>Overview</h2>
@@ -172,27 +162,25 @@ image: "/assets/images/projects/easy-edits-pro-mockup.webp"
         <li><strong>User Interface:</strong> React-based UI delivering a responsive, professional editing layout.</li>
       </ul>
 
-      <h2>Current Status & Limitations</h2>
+      <h2>Current Status</h2>
       <p>
-        Easy Edits Pro is currently in <strong>active alpha development</strong> advancing toward a first beta release. 
-        While core media import, timeline arrangement, and rendering pipelines are operational, certain advanced 
-        workspace features (such as full color grading and complex keyframing) remain incomplete. It is not intended 
-        as a drop-in replacement for mature commercial suites in production environments yet.
+        Easy Edits Pro is in <strong>Public Beta</strong> ({% assign eep_rel = site.data.release_manifest.projects | where: "id", "eep" | first %}{{ eep_rel.latest.tag_name | default: "v0.1.3-beta.3" }}). Core multitrack cutting, GStreamer rendering, word-level captioning, and Starship Control socket bridges run locally with native `.deb`, `.rpm`, and Arch packages published on GitHub Releases.
       </p>
 
-      <h2>Resources & Links</h2>
+      <h2>Resources &amp; Downloads</h2>
       <ul>
-        <li>Repository: <a href="https://github.com/zvirox/easy-edits-pro" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-        <li>Documentation: Available within the repository docs and architecture guides.</li>
+        <li><a href="{{ '/downloads/eep/' | relative_url }}">Download Linux Packages (.deb, .rpm, Arch)</a></li>
+        <li><a href="https://github.com/zvirox/easy-edits-pro" target="_blank" rel="noopener noreferrer">Source Code on GitHub ↗</a></li>
+        <li><a href="{{ '/licensing/' | relative_url }}">AGPL-3.0 &amp; Commercial Licensing Terms</a></li>
       </ul>
     </div>
 
     <nav class="zv-project-navigation" aria-label="Project navigation">
-      <a href="{{ '/projects/' | relative_url }}" class="zv-section-link">
-        &larr; Back to Projects Index
+      <a href="{{ '/projects/ssp/' | relative_url }}" class="zv-section-link">
+        &larr; Previous: Screen Studio Pro
       </a>
       <a href="{{ '/projects/alp/' | relative_url }}" class="zv-section-link">
-        Next Project: Audio Labs Pro &rarr;
+        Next: Audio Labs Pro &rarr;
       </a>
     </nav>
 

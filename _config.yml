@@ -1,5 +1,5 @@
 title: "Zvirox"
-description: "Zvirox builds open-source desktop and TV software: Easy Edits Pro (video editor), Audio Labs Pro (audio studio), Screen Studio Pro (planned screen recorder) and Your TV Friend (Android TV cleanup tool and launcher)."
+description: "Zvirox builds open-source local-first Linux desktop apps (Starship Control, Screen Studio Pro, Easy Edits Pro, Audio Labs Pro, Agentic Tuneup Pro, Net Watch Pro) and Android TV tools (Your TV Friend)."
 url: "https://zvirox.in"
 
 baseurl: ""
@@ -18,9 +18,12 @@ social:
   name: "Zvirox"
   links:
     - "https://github.com/zvirox"
+    - "https://github.com/zvirox/starship-control"
+    - "https://github.com/zvirox/screen-studio-pro"
     - "https://github.com/zvirox/easy-edits-pro"
     - "https://github.com/zvirox/audio-labs-pro"
-    - "https://github.com/zvirox/screen-studio-pro"
+    - "https://github.com/zvirox/agentic-tuneup-pro"
+    - "https://github.com/zvirox/net-watch-pro"
     - "https://github.com/zvirox/your-tv-friend"
 
 twitter:

@@ -1,65 +1,22 @@
 [
   {
-    "id": "eep",
-    "name": "Easy Edits Pro",
-    "tagline": "Next-gen timeline video editor for Linux",
-    "description": "GPU-accelerated, native Linux video editing suite built with Rust, GTK4, and Libadwaita. Fast cutting, precise multi-track timeline, and hardware NVENC/VAAPI rendering.",
-    "repo": "zvirox/easy-edits-pro",
-    "project_url": "/projects/eep/",
-    "license": "AGPL-3.0",
-    "allow_prerelease": true,
-    "platform_requirements": "Linux 64-bit (glibc 2.35+ or Flatpak runtime 24.08)",
-    "asset_rules": [
-      {
-        "id": "flatpak",
-        "label": "Flatpak (Universal)",
-        "platform": "Linux (All Distros)",
-        "icon": "box",
-        "pattern": "^.*\\.flatpak$"
-      },
-      {
-        "id": "deb",
-        "label": "DEB Package",
-        "platform": "Debian / Ubuntu / Mint",
-        "icon": "package",
-        "pattern": "^.*_amd64\\.deb$"
-      },
-      {
-        "id": "rpm",
-        "label": "RPM Package",
-        "platform": "Fedora / RHEL / openSUSE",
-        "icon": "package",
-        "pattern": "^.*\\.x86_64\\.rpm$"
-      }
-    ],
-    "checksum_patterns": [
-      "^SHA256SUMS$",
-      "^sha256sums\\.txt$",
-      "^.*\\.sha256$"
-    ]
-  },
-  {
-    "id": "alp",
-    "name": "Audio Labs Pro",
-    "tagline": "Voice audio workstation & studio cleanup for Linux",
-    "description": "Professional voice isolation, multi-track audio surgical editing, spectral de-noising, and local AI voice model processing natively on the Linux desktop.",
-    "repo": "zvirox/audio-labs-pro",
-    "project_url": "/projects/alp/",
+    "id": "sc",
+    "name": "Starship Control",
+    "category": "linux",
+    "logo": "/assets/images/logos/starship-control.png",
+    "tagline": "Local-first AI cockpit and floating command HUD for Linux",
+    "description": "Connects your Zvirox Linux desktop apps over kernel-checked Unix sockets. Drafts multi-step plans with local GGUF models or optional cloud keys, pausing for human confirmation before any file change.",
+    "repo": "zvirox/starship-control",
+    "project_url": "/projects/sc/",
+    "download_url": "/downloads/sc/",
     "license": "Apache-2.0",
     "allow_prerelease": true,
-    "platform_requirements": "Linux 64-bit (PipeWire / ALSA audio backend)",
+    "platform_requirements": "Linux 64-bit (Wayland or X11, Vulkan/ROCm optional for local GGUF)",
     "asset_rules": [
-      {
-        "id": "flatpak",
-        "label": "Flatpak (Universal)",
-        "platform": "Linux (All Distros)",
-        "icon": "box",
-        "pattern": "^.*\\.flatpak$"
-      },
       {
         "id": "deb",
         "label": "DEB Package",
-        "platform": "Debian / Ubuntu / Mint",
+        "platform": "Debian / Ubuntu / Mint / Pop!_OS",
         "icon": "package",
         "pattern": "^.*_amd64\\.deb$"
       },
@@ -69,6 +26,13 @@
         "platform": "Fedora / RHEL / openSUSE",
         "icon": "package",
         "pattern": "^.*\\.x86_64\\.rpm$"
+      },
+      {
+        "id": "arch",
+        "label": "Arch Package",
+        "platform": "Arch Linux / Manjaro / CachyOS",
+        "icon": "box",
+        "pattern": "^.*\\.pkg\\.tar\\.zst$"
       }
     ],
     "checksum_patterns": [
@@ -80,25 +44,21 @@
   {
     "id": "ssp",
     "name": "Screen Studio Pro",
-    "tagline": "Smooth motion-blur screen recorder for Linux",
-    "description": "Professional screen recorder with automatic cursor smoothing, dynamic zoom-and-follow, and 60fps hardware encoding on Wayland and PipeWire.",
+    "category": "linux",
+    "logo": "/assets/images/logos/screen-studio-pro.png",
+    "tagline": "Fast screen recording built natively for Wayland and X11",
+    "description": "Capture full monitors, windows, or custom regions via native xdg-desktop-portal and PipeWire streams. Includes dual-channel mic and desktop audio meters, webcam overlay, and hardware encoding.",
     "repo": "zvirox/screen-studio-pro",
     "project_url": "/projects/ssp/",
+    "download_url": "/downloads/ssp/",
     "license": "MIT",
-    "allow_prerelease": false,
-    "platform_requirements": "Wayland / PipeWire compositor with Vulkan/EGL support",
+    "allow_prerelease": true,
+    "platform_requirements": "Linux 64-bit (Wayland / X11 with PipeWire and xdg-desktop-portal)",
     "asset_rules": [
-      {
-        "id": "flatpak",
-        "label": "Flatpak (Universal)",
-        "platform": "Linux (All Distros)",
-        "icon": "box",
-        "pattern": "^.*\\.flatpak$"
-      },
       {
         "id": "deb",
         "label": "DEB Package",
-        "platform": "Debian / Ubuntu / Mint",
+        "platform": "Debian / Ubuntu / Mint / Pop!_OS",
         "icon": "package",
         "pattern": "^.*_amd64\\.deb$"
       },
@@ -108,6 +68,181 @@
         "platform": "Fedora / RHEL / openSUSE",
         "icon": "package",
         "pattern": "^.*\\.x86_64\\.rpm$"
+      },
+      {
+        "id": "arch",
+        "label": "Arch Package",
+        "platform": "Arch Linux / Manjaro / CachyOS",
+        "icon": "box",
+        "pattern": "^.*\\.pkg\\.tar\\.zst$"
+      }
+    ],
+    "checksum_patterns": [
+      "^SHA256SUMS$",
+      "^sha256sums\\.txt$",
+      "^.*\\.sha256$"
+    ]
+  },
+  {
+    "id": "eep",
+    "name": "Easy Edits Pro",
+    "category": "linux",
+    "logo": "/assets/images/logos/easy-edits-pro.png",
+    "tagline": "Non-destructive multitrack video editor built for Linux",
+    "description": "Pairs a Rust-owned transactional project core with React 19, Tauri 2, and GStreamer media pipelines. Includes multitrack cutting, keyframe curves, color grading, local speech captions, and Starship MCP automation.",
+    "repo": "zvirox/easy-edits-pro",
+    "project_url": "/projects/eep/",
+    "download_url": "/downloads/eep/",
+    "license": "AGPL-3.0",
+    "allow_prerelease": true,
+    "platform_requirements": "Linux 64-bit (Wayland or X11 with GStreamer 1.x codecs)",
+    "asset_rules": [
+      {
+        "id": "deb",
+        "label": "DEB Package",
+        "platform": "Debian / Ubuntu / Mint / Pop!_OS",
+        "icon": "package",
+        "pattern": "^.*_amd64\\.deb$"
+      },
+      {
+        "id": "rpm",
+        "label": "RPM Package",
+        "platform": "Fedora / RHEL / openSUSE",
+        "icon": "package",
+        "pattern": "^.*\\.x86_64\\.rpm$"
+      },
+      {
+        "id": "arch",
+        "label": "Arch Package",
+        "platform": "Arch Linux / Manjaro / CachyOS",
+        "icon": "box",
+        "pattern": "^.*\\.pkg\\.tar\\.zst$"
+      }
+    ],
+    "checksum_patterns": [
+      "^SHA256SUMS$",
+      "^sha256sums\\.txt$",
+      "^.*\\.sha256$"
+    ]
+  },
+  {
+    "id": "alp",
+    "name": "Audio Labs Pro",
+    "category": "linux",
+    "logo": "/assets/images/logos/audio-labs-pro.png",
+    "tagline": "Offline voice studio and multitrack audio editor for Linux",
+    "description": "Records microphone takes, strips room hum, hosts CLAP and LV2 plugins, and synthesizes or transcribes speech locally using an isolated ONNX/GGUF inference process and a 14-tool MCP server.",
+    "repo": "zvirox/audio-labs-pro",
+    "project_url": "/projects/alp/",
+    "download_url": "/downloads/alp/",
+    "license": "Apache-2.0",
+    "allow_prerelease": true,
+    "platform_requirements": "Linux 64-bit (PipeWire / ALSA / PulseAudio backend)",
+    "asset_rules": [
+      {
+        "id": "deb",
+        "label": "DEB Package",
+        "platform": "Debian / Ubuntu / Mint / Pop!_OS",
+        "icon": "package",
+        "pattern": "^.*_amd64\\.deb$"
+      },
+      {
+        "id": "rpm",
+        "label": "RPM Package",
+        "platform": "Fedora / RHEL / openSUSE",
+        "icon": "package",
+        "pattern": "^.*\\.x86_64\\.rpm$"
+      },
+      {
+        "id": "arch",
+        "label": "Arch Package",
+        "platform": "Arch Linux / Manjaro / CachyOS",
+        "icon": "box",
+        "pattern": "^.*\\.pkg\\.tar\\.zst$"
+      }
+    ],
+    "checksum_patterns": [
+      "^SHA256SUMS$",
+      "^sha256sums\\.txt$",
+      "^.*\\.sha256$"
+    ]
+  },
+  {
+    "id": "atp",
+    "name": "Agentic Tuneup Pro",
+    "category": "linux",
+    "logo": "/assets/images/logos/agentic-tuneup-pro.png",
+    "tagline": "Safety-first Linux disk cleaner, package manager, and health monitor",
+    "description": "Scans browser caches and stale build folders in parallel, moving cleaned items into a reversible SHA-256 quarantine vault instead of deleting immediately. Tracks apt, dnf, pacman, and Flatpak packages in one view.",
+    "repo": "zvirox/agentic-tuneup-pro",
+    "project_url": "/projects/atp/",
+    "download_url": "/downloads/atp/",
+    "license": "AGPL-3.0",
+    "allow_prerelease": true,
+    "platform_requirements": "Linux 64-bit (systemd / PolicyKit for optional system package changes)",
+    "asset_rules": [
+      {
+        "id": "deb",
+        "label": "DEB Package",
+        "platform": "Debian / Ubuntu / Mint / Pop!_OS",
+        "icon": "package",
+        "pattern": "^.*_amd64\\.deb$"
+      },
+      {
+        "id": "rpm",
+        "label": "RPM Package",
+        "platform": "Fedora / RHEL / openSUSE",
+        "icon": "package",
+        "pattern": "^.*\\.x86_64\\.rpm$"
+      },
+      {
+        "id": "arch",
+        "label": "Arch Package",
+        "platform": "Arch Linux / Manjaro / CachyOS",
+        "icon": "box",
+        "pattern": "^.*\\.pkg\\.tar\\.zst$"
+      }
+    ],
+    "checksum_patterns": [
+      "^SHA256SUMS$",
+      "^sha256sums\\.txt$",
+      "^.*\\.sha256$"
+    ]
+  },
+  {
+    "id": "nwp",
+    "name": "Net Watch Pro",
+    "category": "linux",
+    "logo": "/assets/images/logos/net-watch-pro.png",
+    "tagline": "Private Linux network speed monitor and per-app bandwidth tracker",
+    "description": "Watches socket byte counters through a lightweight Aya eBPF daemon and stores 90 days of hourly and daily totals in local SQLite, keeping all traffic logs strictly on your own disk.",
+    "repo": "zvirox/net-watch-pro",
+    "project_url": "/projects/nwp/",
+    "download_url": "/downloads/nwp/",
+    "license": "AGPL-3.0",
+    "allow_prerelease": true,
+    "platform_requirements": "Linux 64-bit (Linux kernel 5.8+ for eBPF socket attribution; interface fallback on older kernels)",
+    "asset_rules": [
+      {
+        "id": "deb",
+        "label": "DEB Package",
+        "platform": "Debian / Ubuntu / Mint / Pop!_OS",
+        "icon": "package",
+        "pattern": "^.*_amd64\\.deb$"
+      },
+      {
+        "id": "rpm",
+        "label": "RPM Package",
+        "platform": "Fedora / RHEL / openSUSE",
+        "icon": "package",
+        "pattern": "^.*\\.x86_64\\.rpm$"
+      },
+      {
+        "id": "arch",
+        "label": "Arch Package",
+        "platform": "Arch Linux / Manjaro / CachyOS",
+        "icon": "box",
+        "pattern": "^.*\\.pkg\\.tar\\.zst$"
       }
     ],
     "checksum_patterns": [
@@ -119,13 +254,16 @@
   {
     "id": "ytf",
     "name": "Your TV Friend",
-    "tagline": "Privacy-first Android TV launcher & debloat suite",
-    "description": "Ultra-lightweight (<250 KB) Material 3 Expressive launcher, zero-tracker TV feed, and safe non-destructive TV debloating toolkit for Google TV and Android TV boxes.",
+    "category": "android",
+    "logo": null,
+    "tagline": "Non-destructive Android TV debloater and native television launcher",
+    "description": "Pairs a rootless pure-Python ADB cleanup tool with Your UI, a plain-Java Android TV launcher shipping 5 visual themes, 26 languages, weather, photo screensaver, and 297 tested TV device profiles.",
     "repo": "zvirox/your-tv-friend",
     "project_url": "/projects/ytf/",
+    "download_url": "/downloads/ytf/",
     "license": "MIT",
     "allow_prerelease": false,
-    "platform_requirements": "Android 8.0+ (Oreo) or higher (ARM64 / ARMv7 / x86)",
+    "platform_requirements": "Android TV / Google TV 8.0+ (Oreo or newer, ARM64 / ARMv7 / x86)",
     "asset_rules": [
       {
         "id": "apk",

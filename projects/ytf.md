@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Your TV Friend
-description: A non-destructive Android TV cleanup tool and Your UI, a native television launcher, with reversible ADB-based package controls.
+description: A non-destructive Android TV cleanup tool and Your UI, a native television launcher with reversible ADB package controls.
 permalink: /projects/ytf/
-image: "/assets/images/projects/your-tv-friend-mockup.webp"
+redirect_from:
+  - /projects/your-tv-friend/
+image: "/assets/images/zvirox-logo.png"
 ---
 
 <script type="application/ld+json">
@@ -15,8 +17,13 @@ image: "/assets/images/projects/your-tv-friend-mockup.webp"
   "applicationCategory": "UtilitiesApplication",
   "description": "A non-destructive Android TV cleanup tool and native television launcher (Your UI) with reversible ADB-based package controls, 5 visual themes, and 26 supported languages.",
   "url": "https://zvirox.in/projects/ytf/",
-  "downloadUrl": "https://github.com/zvirox/your-tv-friend/releases",
+  "downloadUrl": "https://zvirox.in/downloads/ytf/",
   "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
   "author": {
     "@type": "Person",
     "name": "Prakashpuri Gauswami",
@@ -30,25 +37,8 @@ image: "/assets/images/projects/your-tv-friend-mockup.webp"
   <article class="zv-post zv-project-page">
     <a class="zv-project-back" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
 
-    <section class="zv-project-hero" aria-labelledby="project-title">
-      <header class="zv-project-intro">
-        <h1 class="zv-post-title" id="project-title">Your TV Friend</h1>
-        <p class="zv-post-description">A non-destructive Android TV cleanup tool and a native television launcher. The project combines reversible ADB-based debloating tools with Your UI, a customizable launcher for Android TV.</p>
-        <p class="zv-project-status">Android TV · Cleanup tools and launcher</p>
-        <div class="zv-project-tags" aria-label="Technologies"><span class="zv-tag">Java</span> <span class="zv-tag">Android TV</span> <span class="zv-tag">ADB</span> <span class="zv-tag">Python</span> <span class="zv-tag">Android</span></div>
-        <div class="zv-project-actions">
-          <a href="https://github.com/zvirox/your-tv-friend" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary">View on GitHub <span aria-hidden="true">↗</span></a>
-          <a href="{{ '/projects/' | relative_url }}" class="zv-project-text-link">Explore all projects <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </header>
-            <figure class="zv-project-visual">
-        <picture>
-          <source type="image/webp" srcset="{{ '/assets/images/projects/your-tv-friend-mockup.webp' | relative_url }}">
-          <img class="zv-project-image" src="{{ '/assets/images/projects/your-tv-friend-mockup.png' | relative_url }}" alt="Your TV Friend Your UI concept screen with For You recommendations, five round glass controls, and a translucent app shelf over a cinematic landscape." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
-        </picture>
-        <figcaption class="zv-project-caption">Concept mockup inspired by Your UI's Glass UI home-screen layout.</figcaption>
-      </figure>
-    </section>
+    {% assign ytf_tags = "Java,Android TV,ADB,Python,26 Languages" | split: "," %}
+    {% include projects/project-hero.html app_id="ytf" tags=ytf_tags %}
 
     <div class="zv-post-content zv-project-content">
       <h2>Overview</h2>
@@ -195,16 +185,16 @@ image: "/assets/images/projects/your-tv-friend-mockup.webp"
         and consult the project's documentation before disabling system packages.
       </p>
 
-      <h2>Resources & Links</h2>
+      <h2>Resources &amp; Downloads</h2>
       <ul>
-        <li>Repository: <a href="https://github.com/zvirox/your-tv-friend" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-        <li>Releases & APKs: Available via GitHub Releases for manual sideloading.</li>
+        <li><a href="{{ '/downloads/ytf/' | relative_url }}">Download Android APK Installer</a></li>
+        <li><a href="https://github.com/zvirox/your-tv-friend" target="_blank" rel="noopener noreferrer">Source Code on GitHub ↗</a></li>
       </ul>
     </div>
 
     <nav class="zv-project-navigation" aria-label="Project navigation">
-      <a href="{{ '/projects/alp/' | relative_url }}" class="zv-section-link">
-        &larr; Previous: Audio Labs Pro
+      <a href="{{ '/projects/nwp/' | relative_url }}" class="zv-section-link">
+        &larr; Previous: Net Watch Pro
       </a>
       <a href="{{ '/projects/' | relative_url }}" class="zv-section-link">
         Back to Projects Index &rarr;

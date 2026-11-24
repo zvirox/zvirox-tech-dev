@@ -1,0 +1,185 @@
+{% assign id = include.app_id %}
+<figure class="zv-project-motion-stage" aria-label="Interactive architecture preview">
+  {% if id == 'sc' %}
+    <div class="zv-stage-topbar">
+      <span class="zv-visual-badge"><span class="zv-dot zv-dot-cobalt"></span> STARSHIP COCKPIT · FLOATING HUD</span>
+      <span class="zv-visual-code">SO_PEERCRED ACTIVE</span>
+    </div>
+    <div class="zv-stage-canvas">
+      <div class="zv-hud-prompt-row">
+        <span>"Trim silent gaps on Screen Studio capture and normalize speech"</span>
+        <span class="zv-hud-kbd">Super+Shift+Space</span>
+      </div>
+      <div class="zv-stage-panel">
+        <div class="zv-stage-scan-beam"></div>
+        <div style="display:flex; justify-content:space-between; font-family:var(--zv-font-mono); font-size:11px; color:#A1A3AB; margin-bottom:8px;">
+          <span>LOCAL UNIX SOCKETS · ZERO TCP PORTS</span>
+          <span style="color:#22C55E;">TIER 2 GATE ARMED</span>
+        </div>
+        <div class="zv-sc-bridges-row">
+          <span class="zv-sc-pill">ssp.sock</span>
+          <span class="zv-sc-pill">eep.sock</span>
+          <span class="zv-sc-pill">alp.sock</span>
+          <span class="zv-sc-pill">atp.sock</span>
+          <span class="zv-sc-pill">nwp.sock</span>
+        </div>
+      </div>
+      <div class="zv-stage-metrics-row">
+        <div class="zv-stage-metric"><span>Inference</span><strong>GGUF Vulkan</strong></div>
+        <div class="zv-stage-metric"><span>Connected</span><strong>5 Bridges</strong></div>
+        <div class="zv-stage-metric"><span>Telemetry</span><strong>0 Bytes</strong></div>
+      </div>
+    </div>
+
+  {% elsif id == 'ssp' %}
+    <div class="zv-stage-topbar">
+      <span class="zv-visual-badge"><span class="zv-dot zv-dot-red"></span> PIPEWIRE PORTAL · 60 FPS</span>
+      <span class="zv-visual-code">NVENC / VAAPI</span>
+    </div>
+    <div class="zv-stage-canvas">
+      <div class="zv-viewfinder-viewport" style="min-height:140px; margin:0;">
+        <div class="zv-reticle zv-reticle-tl"></div>
+        <div class="zv-reticle zv-reticle-tr"></div>
+        <div class="zv-reticle zv-reticle-bl"></div>
+        <div class="zv-reticle zv-reticle-br"></div>
+        <div class="zv-viewfinder-window" style="width:74%; height:72px;">
+          <span style="font-family:var(--zv-font-mono); font-size:11px; color:#8A8B91;">wayland://xdg-desktop-portal</span>
+          <div class="zv-sim-cursor"></div>
+          <div class="zv-sim-pip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="zv-stage-metrics-row">
+        <div class="zv-stage-metric"><span>Container</span><strong>MKV -> MP4</strong></div>
+        <div class="zv-stage-metric"><span>Audio Bus</span><strong>Mic + System</strong></div>
+        <div class="zv-stage-metric"><span>Compositor</span><strong>Wayland / X11</strong></div>
+      </div>
+    </div>
+
+  {% elsif id == 'eep' %}
+    <div class="zv-stage-topbar">
+      <span class="zv-visual-badge"><span class="zv-dot zv-dot-cobalt"></span> GSTREAMER TIMELINE · 60 FPS</span>
+      <span class="zv-visual-code">RUST SNAPSHOT CORE</span>
+    </div>
+    <div class="zv-stage-canvas">
+      <div class="zv-stage-panel" style="padding:14px 12px;">
+        <div class="zv-timeline-viewport" style="padding:0;">
+          <div class="zv-timeline-track zv-track-video">
+            <div class="zv-track-clip zv-clip-vid1"><span>MAIN_CLIP_01.mkv</span></div>
+            <div class="zv-track-clip zv-clip-vid2"><span>GRADE_PASS</span></div>
+          </div>
+          <div class="zv-timeline-track zv-track-audio">
+            <div class="zv-track-clip zv-clip-aud1">
+              <svg class="zv-wave-svg" viewBox="0 0 120 12" preserveAspectRatio="none"><path d="M0,6 Q10,0 20,6 T40,6 T60,6 T80,6 T100,6 T120,6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span>NARRATION.wav</span>
+            </div>
+            <div class="zv-track-clip zv-clip-aud2"><span>CAPTIONS.srt</span></div>
+          </div>
+          <div class="zv-timeline-playhead"></div>
+        </div>
+      </div>
+      <div class="zv-stage-metrics-row">
+        <div class="zv-stage-metric"><span>Commands</span><strong>489+ Typed</strong></div>
+        <div class="zv-stage-metric"><span>Export</span><strong>MP4 / WebM</strong></div>
+        <div class="zv-stage-metric"><span>Automation</span><strong>CLI + MCP</strong></div>
+      </div>
+    </div>
+
+  {% elsif id == 'alp' %}
+    <div class="zv-stage-topbar">
+      <span class="zv-visual-badge"><span class="zv-dot zv-dot-cyan"></span> DSP WORKSTATION · 48 KHZ</span>
+      <span class="zv-visual-code">14 MCP TOOLS</span>
+    </div>
+    <div class="zv-stage-canvas">
+      <div class="zv-stage-panel">
+        <div class="zv-spectrum-viewport" style="height:104px; padding:12px 6px 4px;">
+          <div class="zv-spectrum-bars" style="height:82px;">
+            <span style="--i:1; --h:62%;"></span><span style="--i:2; --h:84%;"></span>
+            <span style="--i:3; --h:48%;"></span><span style="--i:4; --h:94%;"></span>
+            <span style="--i:5; --h:72%;"></span><span style="--i:6; --h:58%;"></span>
+            <span style="--i:7; --h:88%;"></span><span style="--i:8; --h:66%;"></span>
+            <span style="--i:9; --h:92%;"></span><span style="--i:10; --h:54%;"></span>
+            <span style="--i:11; --h:79%;"></span><span style="--i:12; --h:60%;"></span>
+            <span style="--i:13; --h:76%;"></span><span style="--i:14; --h:46%;"></span>
+            <span style="--i:15; --h:82%;"></span><span style="--i:16; --h:56%;"></span>
+          </div>
+          <div class="zv-spectrum-grid"></div>
+        </div>
+      </div>
+      <div class="zv-stage-metrics-row">
+        <div class="zv-stage-metric"><span>Plugin ABI</span><strong>CLAP / LV2</strong></div>
+        <div class="zv-stage-metric"><span>Speech AI</span><strong>Local ONNX</strong></div>
+        <div class="zv-stage-metric"><span>Audio Thread</span><strong>Lock-Free</strong></div>
+      </div>
+    </div>
+
+  {% elsif id == 'atp' %}
+    <div class="zv-stage-topbar">
+      <span class="zv-visual-badge"><span class="zv-dot zv-dot-emerald"></span> QUARANTINE VAULT · SHA-256</span>
+      <span class="zv-visual-code">ZERO SHELL EXEC</span>
+    </div>
+    <div class="zv-stage-canvas">
+      <div class="zv-stage-panel">
+        <div class="zv-stage-scan-beam"></div>
+        <div style="display:flex; justify-content:space-between; font-family:var(--zv-font-mono); font-size:11px; color:#A1A3AB; margin-bottom:10px;">
+          <span>SCANNER: ~/Projects/*/target · node_modules</span>
+          <span style="color:#22C55E;">PROTECTED: /etc, ~/.ssh</span>
+        </div>
+        <div class="zv-atp-scan-track"><div class="zv-atp-scan-fill"></div></div>
+      </div>
+      <div class="zv-stage-metrics-row">
+        <div class="zv-stage-metric"><span>Deletion</span><strong>Two-Phase Safe</strong></div>
+        <div class="zv-stage-metric"><span>Packages</span><strong>apt · dnf · pacman</strong></div>
+        <div class="zv-stage-metric"><span>Recovery</span><strong>1-Click Restore</strong></div>
+      </div>
+    </div>
+
+  {% elsif id == 'nwp' %}
+    <div class="zv-stage-topbar">
+      <span class="zv-visual-badge"><span class="zv-dot zv-dot-cyan"></span> AYA EBPF SOCKET MONITOR · 1 HZ</span>
+      <span class="zv-visual-code">90-DAY SQLITE</span>
+    </div>
+    <div class="zv-stage-canvas">
+      <div class="zv-stage-panel">
+        <svg class="zv-nwp-spark" viewBox="0 0 360 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="24" x2="360" y2="24" stroke="#1F2125" stroke-width="1"/>
+          <line x1="0" y1="48" x2="360" y2="48" stroke="#1F2125" stroke-width="1"/>
+          <path d="M 0,56 L 28,48 L 56,52 L 84,32 L 112,38 L 140,18 L 168,26 L 196,14 L 224,29 L 252,20 L 280,12 L 308,24 L 336,16 L 360,22" stroke="#3355FF" stroke-width="2" class="zv-nwp-flow-line"/>
+          <path d="M 0,62 L 40,58 L 80,60 L 120,52 L 160,55 L 200,46 L 240,51 L 280,44 L 320,49 L 360,45" stroke="#38B6F0" stroke-width="1.5" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="zv-stage-metrics-row">
+        <div class="zv-stage-metric"><span>Inspection</span><strong>Kernel eBPF</strong></div>
+        <div class="zv-stage-metric"><span>Privilege</span><strong>Daemon Split</strong></div>
+        <div class="zv-stage-metric"><span>Cloud Sync</span><strong>Zero / Offline</strong></div>
+      </div>
+    </div>
+
+  {% else %}
+    <div class="zv-stage-topbar">
+      <span class="zv-visual-badge"><span class="zv-dot zv-dot-emerald"></span> YOUR UI LAUNCHER · ROOTLESS ADB</span>
+      <span class="zv-visual-code">ANDROID 8.0+ TV</span>
+    </div>
+    <div class="zv-stage-canvas">
+      <div class="zv-stage-panel">
+        <div class="zv-tv-viewport" style="padding:4px 0;">
+          <div class="zv-tv-screen" style="height:64px; background:#0B0C0E; border-color:#2C2E33;">
+            <div class="zv-tv-tile" style="height:40px;"></div>
+            <div class="zv-tv-tile zv-tile-active" style="height:40px; border-color:#3355FF;"></div>
+            <div class="zv-tv-tile" style="height:40px;"></div>
+          </div>
+          <div class="zv-adb-status">
+            <span class="zv-adb-tag" style="color:#4ADE80; border-color:rgba(34,197,94,0.3); background:rgba(34,197,94,0.1);">pm disable-user</span>
+            <span style="font-family:var(--zv-font-mono); font-size:10px; color:#7C7E87;">0 system writes</span>
+          </div>
+        </div>
+      </div>
+      <div class="zv-stage-metrics-row">
+        <div class="zv-stage-metric"><span>UI Themes</span><strong>5 Built-in Looks</strong></div>
+        <div class="zv-stage-metric"><span>Languages</span><strong>26 Locales</strong></div>
+        <div class="zv-stage-metric"><span>Profiles</span><strong>297 TV Models</strong></div>
+      </div>
+    </div>
+  {% endif %}
+</figure>

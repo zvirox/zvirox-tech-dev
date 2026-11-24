@@ -1,0 +1,36 @@
+{% assign ch = include.channel %}
+{% unless ch %}
+  {% if include.prerelease %}
+    {% assign tag_lower = include.tag_name | downcase %}
+    {% if tag_lower contains "beta" %}
+      {% assign ch = "beta" %}
+    {% elsif tag_lower contains "-rc" or tag_lower contains ".rc" %}
+      {% assign ch = "rc" %}
+    {% else %}
+      {% assign ch = "alpha" %}
+    {% endif %}
+  {% else %}
+    {% assign ch = "stable" %}
+  {% endif %}
+{% endunless %}
+{% if include.size == "sm" %}
+  {% if ch == "beta" %}
+    <span class="zv-badge-beta-sm">Beta</span>
+  {% elsif ch == "rc" %}
+    <span class="zv-badge-rc-sm">RC</span>
+  {% elsif ch == "alpha" %}
+    <span class="zv-badge-alpha-sm">Alpha</span>
+  {% else %}
+    <span class="zv-badge-stable-sm">Stable</span>
+  {% endif %}
+{% else %}
+  {% if ch == "beta" %}
+    <span class="zv-badge zv-badge-beta" title="Public Beta Build">Beta</span>
+  {% elsif ch == "rc" %}
+    <span class="zv-badge zv-badge-rc" title="Release Candidate">RC</span>
+  {% elsif ch == "alpha" %}
+    <span class="zv-badge zv-badge-alpha" title="Active Alpha Build">Alpha</span>
+  {% else %}
+    <span class="zv-badge zv-badge-stable" title="Stable Release">Stable</span>
+  {% endif %}
+{% endif %}

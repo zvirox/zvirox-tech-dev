@@ -22,11 +22,11 @@
     "assets": [
       {
         "id": 203,
-        "name": "easy-edits-pro-linux-x86_64.flatpak",
+        "name": "easy-edits-pro-0.1.1-alpha.1-1-x86_64.pkg.tar.zst",
         "size": 5970024,
-        "content_type": "application/vnd.flatpak",
+        "content_type": "application/zstd",
         "digest": "sha256:7cfb2b38d6d2727a083360f3d861e7cb429ef1b6be67f507cec0dadd5a866fb3",
-        "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/easy-edits-pro-linux-x86_64.flatpak"
+        "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/easy-edits-pro-0.1.1-alpha.1-1-x86_64.pkg.tar.zst"
       },
       {
         "id": 204,

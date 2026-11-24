@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Audio Labs Pro
-description: A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, with offline AI voice tools, dictation, and CLAP/LV2 hosting.
+description: Offline voice studio and multitrack audio editor for Linux built with Rust, Tauri 2, React 19, and local AI models.
 permalink: /projects/alp/
-image: "/assets/images/projects/audio-labs-pro-mockup.webp"
+redirect_from:
+  - /projects/audio-labs-pro/
+image: "/assets/images/logos/audio-labs-pro.png"
 ---
 
 {% assign alp_release = site.data.release_manifest.projects | where: "id", "alp" | first %}
@@ -15,10 +17,15 @@ image: "/assets/images/projects/audio-labs-pro-mockup.webp"
   "name": "Audio Labs Pro",
   "operatingSystem": "Linux",
   "applicationCategory": "AudioApplication",
-  "description": "A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, with offline AI voice tools, dictation, voice profiles, and CLAP/LV2 plugin hosting.",
+  "description": "Offline-first Linux voice studio and multitrack audio editor built with Rust, Tauri 2, React 19, CLAP/LV2 plugin hosting, and local AI speech inference.",
   "url": "https://zvirox.in/projects/alp/",
-  "downloadUrl": "https://github.com/zvirox/audio-labs-pro/releases",
+  "downloadUrl": "https://zvirox.in/downloads/alp/",
   "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
   "author": {
     "@type": "Person",
     "name": "Prakashpuri Gauswami",
@@ -32,25 +39,8 @@ image: "/assets/images/projects/audio-labs-pro-mockup.webp"
   <article class="zv-post zv-project-page">
     <a class="zv-project-back" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
 
-    <section class="zv-project-hero" aria-labelledby="project-title">
-      <header class="zv-project-intro">
-        <h1 class="zv-post-title" id="project-title">Audio Labs Pro</h1>
-        <p class="zv-post-description">A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, with offline AI voice tools, dictation, voice profiles, and CLAP/LV2 plugin hosting.</p>
-        <p class="zv-project-status">Linux audio workstation · {{ alp_release.latest.tag_name | default: "Alpha release" }}</p>
-        <div class="zv-project-tags" aria-label="Technologies"><span class="zv-tag">Rust</span> <span class="zv-tag">Linux</span> <span class="zv-tag">Iced</span> <span class="zv-tag">Audio DSP</span> <span class="zv-tag">Local AI</span></div>
-        <div class="zv-project-actions">
-          <a href="https://github.com/zvirox/audio-labs-pro" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary">View on GitHub <span aria-hidden="true">↗</span></a>
-          <a href="{{ '/projects/' | relative_url }}" class="zv-project-text-link">Explore all projects <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </header>
-            <figure class="zv-project-visual">
-        <picture>
-          <source type="image/webp" srcset="{{ '/assets/images/projects/audio-labs-pro-mockup.webp' | relative_url }}">
-          <img class="zv-project-image" src="{{ '/assets/images/projects/audio-labs-pro-mockup.png' | relative_url }}" alt="Conceptual Audio Labs Pro Stories workspace with a multitrack audio timeline, seven workspace rail, docked transport, and voice effects inspector." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
-        </picture>
-        <figcaption class="zv-project-caption">Concept mockup inspired by Audio Labs Pro's seven-workspace glass interface.</figcaption>
-      </figure>
-    </section>
+    {% assign alp_tags = "Rust,Tauri 2,React 19,Audio DSP,CLAP/LV2,Local AI,MCP" | split: "," %}
+    {% include projects/project-hero.html app_id="alp" tags=alp_tags %}
 
     <div class="zv-post-content zv-project-content">
       <h2>Overview</h2>
@@ -184,22 +174,20 @@ image: "/assets/images/projects/audio-labs-pro-mockup.webp"
       </div>
 
       <ul>
-        <li><strong>Language:</strong> Rust 1.89+ for memory safety and zero-cost abstractions.</li>
-        <li><strong>Graphics & UI:</strong> Built with `iced 0.14 + kit` for a high-performance native GPU rendering pipeline.</li>
-        <li><strong>Audio Stack:</strong> `cpal` for cross-platform audio device interaction and low-latency buffer management.</li>
+        <li><strong>Language:</strong> Rust workspace with lock-free real-time audio callbacks.</li>
+        <li><strong>Shell &amp; UI:</strong> Tauri 2 + React 19 desktop interface with a 14-tool MCP server and CLI tools.</li>
+        <li><strong>Audio Stack:</strong> `cpal` across PipeWire, ALSA, and PulseAudio with CLAP/LV2 plugin hosting.</li>
       </ul>
 
-      <h2>Current Status & Limitations</h2>
+      <h2>Current Status</h2>
       <p>
-        Audio Labs Pro is currently released as an <strong>alpha</strong> ({{ alp_release.latest.tag_name | default: "see GitHub releases" }}). It targets Linux environments
-        (requiring ALSA headers and pkg-config). While core multitrack mixing, plugin hosting, and AI speech generation 
-        are operational, support varies across specific hardware configurations and plugin implementations.
+        Audio Labs Pro is in <strong>Public Beta</strong> ({{ alp_release.latest.tag_name | default: "v0.1.0-beta.1" }}). Multitrack recording, local speech synthesis, dictation, noise reduction, and Starship socket integration are available as native Linux installers.
       </p>
 
-      <h2>Resources & Links</h2>
+      <h2>Resources &amp; Downloads</h2>
       <ul>
-        <li>Repository: <a href="https://github.com/zvirox/audio-labs-pro" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-        <li>Releases: Check GitHub releases for alpha tarballs and build instructions.</li>
+        <li><a href="{{ '/downloads/alp/' | relative_url }}">Download Linux Packages (.deb, .rpm, Arch)</a></li>
+        <li><a href="https://github.com/zvirox/audio-labs-pro" target="_blank" rel="noopener noreferrer">Source Code on GitHub ↗</a></li>
       </ul>
     </div>
 
@@ -207,8 +195,8 @@ image: "/assets/images/projects/audio-labs-pro-mockup.webp"
       <a href="{{ '/projects/eep/' | relative_url }}" class="zv-section-link">
         &larr; Previous: Easy Edits Pro
       </a>
-      <a href="{{ '/projects/ytf/' | relative_url }}" class="zv-section-link">
-        Next Project: Your TV Friend &rarr;
+      <a href="{{ '/projects/atp/' | relative_url }}" class="zv-section-link">
+        Next: Agentic Tuneup Pro &rarr;
       </a>
     </nav>
 

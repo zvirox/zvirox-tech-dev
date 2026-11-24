@@ -1,186 +1,132 @@
 ---
 layout: default
-title: Projects
-description: Explore the software projects built and maintained across desktop applications, audio production, and Android TV. Built with curiosity and shaped by code.
+title: Open-Source Software Projects
+description: Explore all 7 open-source Linux desktop and Android TV applications built under Zvirox with Rust, Tauri 2, React 19, Java, and ADB.
 permalink: /projects/
 image: "/assets/images/zvirox-logo.png"
 ---
 
-{% assign alp_release = site.data.release_manifest.projects | where: "id", "alp" | first %}
-{% assign ytf_release = site.data.release_manifest.projects | where: "id", "ytf" | first %}
+{% assign linux_products = site.data.download_products | where: "category", "linux" %}
+{% assign android_products = site.data.download_products | where: "category", "android" %}
 
 <div class="zv-container">
 
   <!-- HERO SECTION -->
   <section class="zv-about-hero">
-    
     <div class="zv-about-hero-content">
-      
-      <div class="zv-card-category">
-        PORTFOLIO • OPEN SOURCE
-      </div>
-
+      <div class="zv-card-category">Open-source suite · Local-first tools</div>
       <h1 class="zv-about-hero-title">
-        Projects.
-        <span>Built with code.</span>
+        Software built to stay <span>on your hardware.</span>
       </h1>
-
       <p class="zv-about-hero-lead">
-        Explore the software projects I'm building and maintaining across desktop 
-        applications, audio production, and Android TV. Each project brings together 
-        practical engineering, thoughtful design, and a commitment to open-source development.
+        Six native Linux desktop utilities wired into Starship Control over local Unix sockets, plus an Android TV launcher and rootless ADB cleanup toolkit. Zero cloud accounts, zero telemetry.
       </p>
-
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
+        <a href="{{ '/downloads/' | relative_url }}" class="zv-button zv-button-primary">Browse Downloads →</a>
+        <a href="https://github.com/zvirox" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-secondary">GitHub Organization ↗</a>
+      </div>
     </div>
-
   </section>
 
-
-  <!-- PROJECTS GRID -->
-  <section class="zv-section">
-    
+  <!-- LINUX DESKTOP APPS (6 Apps with Logos) -->
+  <section class="zv-section" aria-labelledby="proj-linux-heading">
     <div class="zv-section-header">
       <div>
-        <div class="zv-card-category">
-          FEATURED WORK
-        </div>
-        <h2 class="zv-section-title">
-          Featured Projects
-        </h2>
+        <div class="zv-card-category">Desktop suite · .deb / .rpm / .pkg.tar.zst</div>
+        <h2 id="proj-linux-heading" class="zv-section-title">Linux Desktop Apps ({{ linux_products.size }})</h2>
+      </div>
+      <a href="{{ '/downloads/' | relative_url }}" class="zv-section-link">Download installers →</a>
+    </div>
+
+    <div class="zv-projects-grid">
+      {% for product in linux_products %}
+        {% assign rel = site.data.release_manifest.projects | where: "id", product.id | first %}
+        <article class="zv-card zv-project-card">
+          <div class="zv-card-body zv-project-card-body">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:14px;">
+              <div class="zv-app-title-with-logo">
+                {% if product.logo %}
+                  <img
+                    src="{{ product.logo | relative_url }}"
+                    alt="{{ product.name }} logo"
+                    class="zv-app-logo-chip"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                  >
+                {% endif %}
+                <div>
+                  <div class="zv-card-category" style="margin-bottom:2px;">{{ product.license }}</div>
+                  <h3 class="zv-card-title" style="margin:0;">
+                    <a href="{{ product.project_url | relative_url }}">{{ product.name }}</a>
+                  </h3>
+                </div>
+              </div>
+              <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">
+                {% if rel.status == 'available' and rel.latest %}
+                  {% include downloads/release-badge.html channel=rel.latest.release_channel prerelease=rel.latest.prerelease tag_name=rel.latest.tag_name size="sm" %}
+                  <span class="zv-badge-version" style="font-size:11px; padding:2px 7px;">{{ rel.latest.tag_name | escape }}</span>
+                {% endif %}
+              </div>
+            </div>
+
+            <p class="zv-card-excerpt">{{ product.tagline }}. {{ product.description }}</p>
+
+            <div class="zv-project-card-footer">
+              <div style="display:flex; gap:14px; align-items:center;">
+                <a href="{{ product.project_url | relative_url }}" class="zv-section-link">Architecture →</a>
+                <a href="{{ product.download_url | relative_url }}" class="zv-project-github-link" style="color:var(--zv-text-secondary);">Downloads</a>
+              </div>
+              <a href="https://github.com/{{ product.repo }}" target="_blank" rel="noopener noreferrer" class="zv-project-github-link">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ANDROID TV APPS (1 App, left WITHOUT logo as requested) -->
+  <section class="zv-section" aria-labelledby="proj-android-heading">
+    <div class="zv-section-header">
+      <div>
+        <div class="zv-card-category">Television &amp; ADB tools · Android 8.0+</div>
+        <h2 id="proj-android-heading" class="zv-section-title">Android TV ({{ android_products.size }})</h2>
       </div>
     </div>
 
     <div class="zv-projects-grid">
+      {% for product in android_products %}
+        {% assign rel = site.data.release_manifest.projects | where: "id", product.id | first %}
+        <article class="zv-card zv-project-card">
+          <div class="zv-card-body zv-project-card-body">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:14px;">
+              <div>
+                <div class="zv-card-category" style="margin-bottom:2px;">{{ product.license }} · Android TV</div>
+                <h3 class="zv-card-title" style="margin:0;">
+                  <a href="{{ product.project_url | relative_url }}">{{ product.name }}</a>
+                </h3>
+              </div>
+              <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">
+                {% if rel.status == 'available' and rel.latest %}
+                  {% include downloads/release-badge.html channel=rel.latest.release_channel prerelease=rel.latest.prerelease tag_name=rel.latest.tag_name size="sm" %}
+                  <span class="zv-badge-version" style="font-size:11px; padding:2px 7px;">{{ rel.latest.tag_name | escape }}</span>
+                {% endif %}
+              </div>
+            </div>
 
-      <!-- Easy Edits Pro -->
-      <article class="zv-card zv-project-card">
-        <div class="zv-card-body zv-project-card-body">
-          <div class="zv-card-category">
-            DESKTOP VIDEO EDITOR • ACTIVE ALPHA
-          </div>
-          <h3 class="zv-card-title">
-            <a href="{{ '/projects/eep/' | relative_url }}">Easy Edits Pro</a>
-          </h3>
-          <p class="zv-card-excerpt">
-            An alpha-stage Linux desktop video editor built with Rust, Tauri, React, and GStreamer. 
-            It combines a multitrack editing workflow with a Rust-owned project model and automation interfaces.
-          </p>
-          <div class="zv-project-card-tags">
-            <span class="zv-tag">Rust</span>
-            <span class="zv-tag">Tauri</span>
-            <span class="zv-tag">React</span>
-            <span class="zv-tag">GStreamer</span>
-            <span class="zv-tag">Linux</span>
-          </div>
-          <div class="zv-project-card-footer">
-            <a href="{{ '/projects/eep/' | relative_url }}" class="zv-section-link">
-              Explore Project →
-            </a>
-            <a href="https://github.com/zvirox/easy-edits-pro" target="_blank" rel="noopener noreferrer" class="zv-project-github-link">
-              GitHub ↗
-            </a>
-          </div>
-        </div>
-      </article>
+            <p class="zv-card-excerpt">{{ product.tagline }}. {{ product.description }}</p>
 
-
-      <!-- Audio Labs Pro -->
-      <article class="zv-card zv-project-card">
-        <div class="zv-card-body zv-project-card-body">
-          <div class="zv-card-category">
-            AUDIO WORKSTATION • {{ alp_release.latest.tag_name | default: "ALPHA" | upcase }}
+            <div class="zv-project-card-footer">
+              <div style="display:flex; gap:14px; align-items:center;">
+                <a href="{{ product.project_url | relative_url }}" class="zv-section-link">Architecture →</a>
+                <a href="{{ product.download_url | relative_url }}" class="zv-project-github-link" style="color:var(--zv-text-secondary);">Downloads</a>
+              </div>
+              <a href="https://github.com/{{ product.repo }}" target="_blank" rel="noopener noreferrer" class="zv-project-github-link">GitHub ↗</a>
+            </div>
           </div>
-          <h3 class="zv-card-title">
-            <a href="{{ '/projects/alp/' | relative_url }}">Audio Labs Pro</a>
-          </h3>
-          <p class="zv-card-excerpt">
-            A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, 
-            with offline AI voice tools, dictation, voice profiles, and CLAP/LV2 plugin hosting.
-          </p>
-          <div class="zv-project-card-tags">
-            <span class="zv-tag">Rust</span>
-            <span class="zv-tag">Linux</span>
-            <span class="zv-tag">Iced</span>
-            <span class="zv-tag">Audio DSP</span>
-            <span class="zv-tag">Local AI</span>
-          </div>
-          <div class="zv-project-card-footer">
-            <a href="{{ '/projects/alp/' | relative_url }}" class="zv-section-link">
-              Explore Project →
-            </a>
-            <a href="https://github.com/zvirox/audio-labs-pro" target="_blank" rel="noopener noreferrer" class="zv-project-github-link">
-              GitHub ↗
-            </a>
-          </div>
-        </div>
-      </article>
-
-
-      <!-- Screen Studio Pro -->
-      <article class="zv-card zv-project-card">
-        <div class="zv-card-body zv-project-card-body">
-          <div class="zv-card-category">
-            LINUX SCREEN RECORDER • PLANNING PHASE
-          </div>
-          <h3 class="zv-card-title">
-            <a href="{{ '/projects/ssp/' | relative_url }}">Screen Studio Pro</a>
-          </h3>
-          <p class="zv-card-excerpt">
-            A planned open-source Wayland screen recorder with a frosted-glass interface, PipeWire capture,
-            webcam picture-in-picture, and hardware-first encoding.
-          </p>
-          <div class="zv-project-card-tags">
-            <span class="zv-tag">Rust</span>
-            <span class="zv-tag">Tauri</span>
-            <span class="zv-tag">React</span>
-            <span class="zv-tag">Linux</span>
-            <span class="zv-tag">Wayland</span>
-          </div>
-          <div class="zv-project-card-footer">
-            <a href="{{ '/projects/ssp/' | relative_url }}" class="zv-section-link">
-              Explore Project →
-            </a>
-            <a href="https://github.com/zvirox/screen-studio-pro" target="_blank" rel="noopener noreferrer" class="zv-project-github-link">
-              GitHub ↗
-            </a>
-          </div>
-        </div>
-      </article>
-
-
-      <!-- Your TV Friend -->
-      <article class="zv-card zv-project-card">
-        <div class="zv-card-body zv-project-card-body">
-          <div class="zv-card-category">
-            ANDROID TV • {{ ytf_release.latest.tag_name | default: "Releases" }}
-          </div>
-          <h3 class="zv-card-title">
-            <a href="{{ '/projects/ytf/' | relative_url }}">Your TV Friend</a>
-          </h3>
-          <p class="zv-card-excerpt">
-            A non-destructive Android TV cleanup tool and native television launcher (Your UI).
-            Combines ADB-based package disabling tools with 5 customizable launcher visual styles.
-          </p>
-          <div class="zv-project-card-tags">
-            <span class="zv-tag">Java</span>
-            <span class="zv-tag">Android TV</span>
-            <span class="zv-tag">ADB</span>
-            <span class="zv-tag">Python</span>
-            <span class="zv-tag">Android</span>
-          </div>
-          <div class="zv-project-card-footer">
-            <a href="{{ '/projects/ytf/' | relative_url }}" class="zv-section-link">
-              Explore Project →
-            </a>
-            <a href="https://github.com/zvirox/your-tv-friend" target="_blank" rel="noopener noreferrer" class="zv-project-github-link">
-              GitHub ↗
-            </a>
-          </div>
-        </div>
-      </article>
-
+        </article>
+      {% endfor %}
     </div>
-
   </section>
 
 </div>

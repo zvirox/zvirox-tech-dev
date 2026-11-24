@@ -1,0 +1,51 @@
+{% assign prod = site.data.download_products | where: "id", include.app_id | first %}
+{% assign rel = site.data.release_manifest.projects | where: "id", include.app_id | first %}
+
+<section class="zv-project-hero" aria-labelledby="project-title">
+  <header class="zv-project-intro">
+    <div class="zv-app-title-with-logo" style="margin-bottom:16px;">
+      {% if prod.logo %}
+        <img
+          src="{{ prod.logo | relative_url }}"
+          alt="{{ prod.name }} logo"
+          class="zv-app-logo-lg"
+          width="56"
+          height="56"
+          loading="eager"
+        >
+      {% endif %}
+      <div>
+        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:4px;">
+          {% if rel.status == 'available' and rel.latest %}
+            {% include downloads/release-badge.html channel=rel.latest.release_channel prerelease=rel.latest.prerelease tag_name=rel.latest.tag_name %}
+            <span class="zv-badge zv-badge-version">{{ rel.latest.tag_name | escape }}</span>
+          {% else %}
+            <span class="zv-badge zv-badge-planning">In Development</span>
+          {% endif %}
+          <span class="zv-badge zv-badge-version">{{ prod.license }}</span>
+        </div>
+        <h1 class="zv-post-title" id="project-title" style="margin:0;">{{ prod.name }}</h1>
+      </div>
+    </div>
+
+    <p class="zv-post-description">{{ prod.description }}</p>
+
+    <div class="zv-project-tags" aria-label="Technologies">
+      {% for tag in include.tags %}
+        <span class="zv-tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+
+    <div class="zv-project-actions">
+      <a href="{{ prod.download_url | relative_url }}" class="zv-button zv-button-primary">
+        Download {{ prod.name }} →
+      </a>
+      <a href="https://github.com/{{ prod.repo }}" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-secondary">
+        GitHub Repository ↗
+      </a>
+      <a href="{{ '/projects/' | relative_url }}" class="zv-project-text-link">All projects</a>
+    </div>
+  </header>
+
+  {% include projects/hero-motion-stage.html app_id=include.app_id %}
+</section>

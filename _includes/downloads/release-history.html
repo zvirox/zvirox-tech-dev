@@ -10,11 +10,7 @@
         <li class="zv-history-item">
           <div class="zv-history-meta">
             <span class="zv-history-tag">{{ rel.tag_name | escape }}</span>
-            {% if rel.prerelease %}
-            <span class="zv-badge zv-badge-alpha-sm">Alpha</span>
-            {% else %}
-            <span class="zv-badge zv-badge-stable-sm">Stable</span>
-            {% endif %}
+            {% include downloads/release-badge.html channel=rel.release_channel prerelease=rel.prerelease tag_name=rel.tag_name size="sm" %}
             <span class="zv-history-date">{{ rel.published_at | slice: 0, 10 }}</span>
           </div>
           <a href="{{ rel.html_url }}" target="_blank" rel="noopener noreferrer" class="zv-history-link">

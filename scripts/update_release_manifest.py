@@ -116,6 +116,21 @@ def extract_checksum(asset: dict, all_assets: list[dict]) -> str | None:
     return None
 
 
+def detect_release_channel(tag_name: str, is_prerelease: bool) -> str:
+    """
+    Classifies a release into 'stable', 'beta', 'rc', or 'alpha'
+    using the release prerelease flag and semantic version suffix.
+    """
+    if not is_prerelease:
+        return "stable"
+    lowered = (tag_name or "").lower()
+    if "beta" in lowered:
+        return "beta"
+    if "-rc" in lowered or ".rc" in lowered:
+        return "rc"
+    return "alpha"
+
+
 def normalize_project(product: dict, releases: list[dict]) -> dict:
     """
     Normalizes a project's releases into the standardized manifest contract:
@@ -139,13 +154,20 @@ def normalize_project(product: dict, releases: list[dict]) -> dict:
     repo_url = f"https://github.com/{product['repo']}"
     releases_url = f"{repo_url}/releases"
 
+    base_meta = {
+        "id": product["id"],
+        "name": product["name"],
+        "category": product.get("category", "linux"),
+        "logo": product.get("logo"),
+        "repo": product["repo"],
+        "project_url": product.get("project_url", ""),
+        "download_url": product.get("download_url", ""),
+        "releases_url": releases_url,
+    }
+
     if not latest_release:
         return {
-            "id": product["id"],
-            "name": product["name"],
-            "repo": product["repo"],
-            "project_url": product.get("project_url", ""),
-            "releases_url": releases_url,
+            **base_meta,
             "status": "planning",
             "latest": None,
             "history": []
@@ -183,31 +205,33 @@ def normalize_project(product: dict, releases: list[dict]) -> dict:
         rel_url = rel.get("html_url", "")
         if not rel_url.startswith("https://"):
             rel_url = releases_url
+        rel_tag = rel.get("tag_name", "")
+        rel_pre = bool(rel.get("prerelease", False))
         history.append({
-            "tag_name": rel.get("tag_name", ""),
-            "name": rel.get("name", rel.get("tag_name", "")),
+            "tag_name": rel_tag,
+            "name": rel.get("name", rel_tag),
             "published_at": rel.get("published_at", ""),
             "html_url": rel_url,
-            "prerelease": bool(rel.get("prerelease", False))
+            "prerelease": rel_pre,
+            "release_channel": detect_release_channel(rel_tag, rel_pre)
         })
 
     latest_html_url = latest_release.get("html_url", "")
     if not latest_html_url.startswith("https://"):
         latest_html_url = releases_url
+    latest_tag = latest_release.get("tag_name", "")
+    latest_pre = bool(latest_release.get("prerelease", False))
 
     return {
-        "id": product["id"],
-        "name": product["name"],
-        "repo": product["repo"],
-        "project_url": product.get("project_url", ""),
-        "releases_url": releases_url,
+        **base_meta,
         "status": "available",
         "latest": {
-            "tag_name": latest_release.get("tag_name", ""),
-            "name": latest_release.get("name", latest_release.get("tag_name", "")),
+            "tag_name": latest_tag,
+            "name": latest_release.get("name", latest_tag),
             "published_at": latest_release.get("published_at", ""),
             "html_url": latest_html_url,
-            "prerelease": bool(latest_release.get("prerelease", False)),
+            "prerelease": latest_pre,
+            "release_channel": detect_release_channel(latest_tag, latest_pre),
             "summary": sanitize_release_notes(latest_release.get("body", "")),
             "assets": matched_assets
         },

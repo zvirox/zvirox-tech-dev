@@ -2,8 +2,8 @@ name: Update Downloads Manifest
 
 on:
   schedule:
-    # Run every 4 hours to poll for new GitHub releases
-    - cron: '0 */4 * * *'
+    # Run once daily at 06:00 IST (00:30 UTC) to poll for new GitHub releases
+    - cron: '30 0 * * *'
   workflow_dispatch:
     # Allow manual execution anytime from the GitHub Actions tab
 
