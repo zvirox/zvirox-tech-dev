@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T08:54:35Z",
+  "generated_at": "2026-11-28T08:14:43Z",
   "projects": [
     {
       "id": "sc",
@@ -12,47 +12,55 @@
       "releases_url": "https://github.com/zvirox/starship-control/releases",
       "status": "available",
       "latest": {
-        "tag_name": "v0.1.0-beta.4",
-        "name": "v0.1.0-beta.4",
-        "published_at": "2026-11-26T09:37:36Z",
-        "html_url": "https://github.com/zvirox/starship-control/releases/tag/v0.1.0-beta.4",
+        "tag_name": "v0.1.0-beta.6",
+        "name": "v0.1.0-beta.6",
+        "published_at": "2026-11-27T14:22:08Z",
+        "html_url": "https://github.com/zvirox/starship-control/releases/tag/v0.1.0-beta.6",
         "prerelease": true,
         "release_channel": "beta",
-        "summary": "Installation Download the package matching your distribution from the assets below: Ubuntu / Debian / Pop!_OS / Linux Mint ```bash sudo apt install ./starship-control_0.1.0-beta.4_amd64.deb ``` Fedora / RHEL / openSUSE ```bash sudo dnf inst...",
+        "summary": "Installation Download the package matching your distribution from the assets below: Ubuntu / Debian / Pop!_OS / Linux Mint ```bash sudo apt install ./starship-control_0.1.0-beta.6_amd64.deb ``` Fedora / RHEL / openSUSE ```bash sudo dnf inst...",
         "assets": [
           {
             "rule_id": "deb",
             "label": "DEB Package",
             "platform": "Debian / Ubuntu / Mint / Pop!_OS",
             "icon": "package",
-            "name": "starship-control_0.1.0-beta.4_amd64.deb",
-            "size": 13000678,
-            "browser_download_url": "https://github.com/zvirox/starship-control/releases/download/v0.1.0-beta.4/starship-control_0.1.0-beta.4_amd64.deb",
-            "sha256": "ea5994f7ef44a38567176b667f7a24b782a06eaeb8074d660657d110fb829249"
+            "name": "starship-control_0.1.0-beta.6_amd64.deb",
+            "size": 13157400,
+            "browser_download_url": "https://github.com/zvirox/starship-control/releases/download/v0.1.0-beta.6/starship-control_0.1.0-beta.6_amd64.deb",
+            "sha256": "3561d5453db702ff027ea47b0ebc6c6f48a9b1e0243b93141d750b0e3c8e25c7"
           },
           {
             "rule_id": "rpm",
             "label": "RPM Package",
             "platform": "Fedora / RHEL / openSUSE",
             "icon": "package",
-            "name": "starship-control-0.1.0-beta.4-1.x86_64.rpm",
-            "size": 13370670,
-            "browser_download_url": "https://github.com/zvirox/starship-control/releases/download/v0.1.0-beta.4/starship-control-0.1.0-beta.4-1.x86_64.rpm",
-            "sha256": "57dc52cf355776252b51968d55791af2d8b0345a0ecc68d6537438f5b69c45f5"
+            "name": "starship-control-0.1.0-beta.6-1.x86_64.rpm",
+            "size": 13514660,
+            "browser_download_url": "https://github.com/zvirox/starship-control/releases/download/v0.1.0-beta.6/starship-control-0.1.0-beta.6-1.x86_64.rpm",
+            "sha256": "92a651aa94cc3004004b2d1e6020b0c13001b20d228482dd88e1224da37f43dc"
           },
           {
             "rule_id": "arch",
             "label": "Arch Package",
             "platform": "Arch Linux / Manjaro / CachyOS",
             "icon": "box",
-            "name": "starship-control-0.1.0-beta.4-1-x86_64.pkg.tar.zst",
-            "size": 12299594,
-            "browser_download_url": "https://github.com/zvirox/starship-control/releases/download/v0.1.0-beta.4/starship-control-0.1.0-beta.4-1-x86_64.pkg.tar.zst",
-            "sha256": "1b768c81274fde125678123d4a3beaa8a9b9f846487847dc3affbf4694936d9a"
+            "name": "starship-control-0.1.0-beta.6-1-x86_64.pkg.tar.zst",
+            "size": 12433950,
+            "browser_download_url": "https://github.com/zvirox/starship-control/releases/download/v0.1.0-beta.6/starship-control-0.1.0-beta.6-1-x86_64.pkg.tar.zst",
+            "sha256": "35b6b6d3c74d5cda6db0392687dd990847db4e623cc10579d5c5c46375d3d648"
           }
         ]
       },
       "history": [
+        {
+          "tag_name": "v0.1.0-beta.6",
+          "name": "v0.1.0-beta.6",
+          "published_at": "2026-11-27T14:22:08Z",
+          "html_url": "https://github.com/zvirox/starship-control/releases/tag/v0.1.0-beta.6",
+          "prerelease": true,
+          "release_channel": "beta"
+        },
         {
           "tag_name": "v0.1.0-beta.4",
           "name": "v0.1.0-beta.4",
@@ -84,14 +92,6 @@
           "html_url": "https://github.com/zvirox/starship-control/releases/tag/v0.1.0-beta.1",
           "prerelease": true,
           "release_channel": "beta"
-        },
-        {
-          "tag_name": "v0.1.0-alpha.3",
-          "name": "Starship Control v0.1.0-alpha.3",
-          "published_at": "2026-11-23T15:09:42Z",
-          "html_url": "https://github.com/zvirox/starship-control/releases/tag/v0.1.0-alpha.3",
-          "prerelease": true,
-          "release_channel": "alpha"
         }
       ]
     },
@@ -106,47 +106,55 @@
       "releases_url": "https://github.com/zvirox/screen-studio-pro/releases",
       "status": "available",
       "latest": {
-        "tag_name": "v0.1.0-beta.4",
-        "name": "v0.1.0-beta.4",
-        "published_at": "2026-11-26T09:52:52Z",
-        "html_url": "https://github.com/zvirox/screen-studio-pro/releases/tag/v0.1.0-beta.4",
+        "tag_name": "v0.1.0-beta.5",
+        "name": "v0.1.0-beta.5",
+        "published_at": "2026-11-27T17:45:58Z",
+        "html_url": "https://github.com/zvirox/screen-studio-pro/releases/tag/v0.1.0-beta.5",
         "prerelease": true,
         "release_channel": "beta",
-        "summary": "Installation Download the package matching your distribution from the assets below: Ubuntu / Debian / Pop!_OS / Linux Mint ```bash sudo apt install ./screen-studio-pro_0.1.0-beta.4_amd64.deb ``` Fedora / RHEL / openSUSE ```bash sudo dnf ins...",
+        "summary": "Installation Download the package matching your distribution from the assets below: Ubuntu / Debian / Pop!_OS / Linux Mint ```bash sudo apt install ./screen-studio-pro_0.1.0-beta.5_amd64.deb ``` Fedora / RHEL / openSUSE ```bash sudo dnf ins...",
         "assets": [
           {
             "rule_id": "deb",
             "label": "DEB Package",
             "platform": "Debian / Ubuntu / Mint / Pop!_OS",
             "icon": "package",
-            "name": "screen-studio-pro_0.1.0-beta.4_amd64.deb",
-            "size": 8471722,
-            "browser_download_url": "https://github.com/zvirox/screen-studio-pro/releases/download/v0.1.0-beta.4/screen-studio-pro_0.1.0-beta.4_amd64.deb",
-            "sha256": "be64cefb2870fb780f67d8a822bfe6366e8c363f39a2be759388ba80cb4548e7"
+            "name": "screen-studio-pro_0.1.0-beta.5_amd64.deb",
+            "size": 9046856,
+            "browser_download_url": "https://github.com/zvirox/screen-studio-pro/releases/download/v0.1.0-beta.5/screen-studio-pro_0.1.0-beta.5_amd64.deb",
+            "sha256": "bd60ee07539d3c77a458827e762d077a1a15c350567f93a51c1775337b9566cc"
           },
           {
             "rule_id": "rpm",
             "label": "RPM Package",
             "platform": "Fedora / RHEL / openSUSE",
             "icon": "package",
-            "name": "screen-studio-pro-0.1.0-beta.4-1.x86_64.rpm",
-            "size": 8832881,
-            "browser_download_url": "https://github.com/zvirox/screen-studio-pro/releases/download/v0.1.0-beta.4/screen-studio-pro-0.1.0-beta.4-1.x86_64.rpm",
-            "sha256": "3b9b8909276667300dbfc3f3220ec70acc619eb4cf7238fc1e8c33d3cbf3acfc"
+            "name": "screen-studio-pro-0.1.0-beta.5-1.x86_64.rpm",
+            "size": 9433428,
+            "browser_download_url": "https://github.com/zvirox/screen-studio-pro/releases/download/v0.1.0-beta.5/screen-studio-pro-0.1.0-beta.5-1.x86_64.rpm",
+            "sha256": "b846f43363d9c11ec6b82b77ff097cc129490101d53a0dfad369003d8e305158"
           },
           {
             "rule_id": "arch",
             "label": "Arch Package",
             "platform": "Arch Linux / Manjaro / CachyOS",
             "icon": "box",
-            "name": "screen-studio-pro-0.1.0-beta.4-1-x86_64.pkg.tar.zst",
-            "size": 7947982,
-            "browser_download_url": "https://github.com/zvirox/screen-studio-pro/releases/download/v0.1.0-beta.4/screen-studio-pro-0.1.0-beta.4-1-x86_64.pkg.tar.zst",
-            "sha256": "54aa6184cc0a84ca367b5511edf98c5c6b6021e52ec47522085278666b1afe4f"
+            "name": "screen-studio-pro-0.1.0-beta.5-1-x86_64.pkg.tar.zst",
+            "size": 8548993,
+            "browser_download_url": "https://github.com/zvirox/screen-studio-pro/releases/download/v0.1.0-beta.5/screen-studio-pro-0.1.0-beta.5-1-x86_64.pkg.tar.zst",
+            "sha256": "ef9954be37c121dddecd1721c68a98c48065cfebce4db3d5d796e4cec4b6b1f2"
           }
         ]
       },
       "history": [
+        {
+          "tag_name": "v0.1.0-beta.5",
+          "name": "v0.1.0-beta.5",
+          "published_at": "2026-11-27T17:45:58Z",
+          "html_url": "https://github.com/zvirox/screen-studio-pro/releases/tag/v0.1.0-beta.5",
+          "prerelease": true,
+          "release_channel": "beta"
+        },
         {
           "tag_name": "v0.1.0-beta.4",
           "name": "v0.1.0-beta.4",
@@ -178,14 +186,6 @@
           "html_url": "https://github.com/zvirox/screen-studio-pro/releases/tag/v0.1.0-beta.1",
           "prerelease": true,
           "release_channel": "beta"
-        },
-        {
-          "tag_name": "v0.0.1-alpha.9",
-          "name": "ScreenStudio Pro v0.0.1-alpha.9",
-          "published_at": "2026-11-23T16:03:10Z",
-          "html_url": "https://github.com/zvirox/screen-studio-pro/releases/tag/v0.0.1-alpha.9",
-          "prerelease": true,
-          "release_channel": "alpha"
         }
       ]
     },
